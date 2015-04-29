@@ -21,6 +21,7 @@
     "browser-sync": "^2.2.3",
     "rimraf": "^2.3.1",
     "gulp-plumber" :"^1.0.0",
-    "gulp-zip": "^3.0.2"
+    "gulp-zip": "^3.0.2",
+    "gulp.spritesmith" : "^3.5.4"
   }
 }
