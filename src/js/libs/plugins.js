@@ -4,9 +4,6 @@
 //Magnific popup
 //= ../../../builder/bower_components/magnificpopup/dist/jquery.magnific-popup.js
 
-//Bootstrap
-//= ../../../builder/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js
-
 //JQuery countdown
 //= jquery.countdown.min.js
 

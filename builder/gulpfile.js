@@ -108,7 +108,7 @@ gulp.task('sprite', function() {
             sprite.name = 's-' + sprite.name
         }
     }));
-    spriteData.css.pipe(gulp.dest('../src/css'));
+    spriteData.css.pipe(gulp.dest('../src/css/4_common'));
     spriteData.img.pipe(gulp.dest(path.build.img));
 });
 
@@ -205,6 +205,13 @@ gulp.task('php:build', function() {
         .pipe(gulp.dest(path.build.php));
 })
 
+//Create zip file
+gulp.task('zip', function () {
+    return gulp.src('../build/**/*.*')
+        .pipe(plugins.zip('build.zip'))
+        .pipe(gulp.dest('../'));
+});
+
 
 gulp.task('webserver', function() {
     plugins.browserSync(serv_config);
@@ -216,6 +223,7 @@ gulp.task('clean', function(cb) {
 
 //All build task
 gulp.task('build', [
+	'sprite',
     'html:build',
     'js:build',
     'css:build',
@@ -227,6 +235,7 @@ gulp.task('build', [
 
 //Develop build task
 gulp.task('dev', [
+	'sprite',
     'html:dev',
     'js:dev',
     'css:dev',
