@@ -1,9 +1,6 @@
 {
-  "name": "cinema",
-  "version": "1.0.3",
-  "description": "cinema template",
-  "author": "Yevhen Saienko",
-  "license": "ISC",
+  "name": "PackgeName",
+  "version": "1.0.0",
   "dependencies": {
   	"gulp": "^3.8.11",
   	"gulp-rename": "^1.2.2",

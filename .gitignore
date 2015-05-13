@@ -1,4 +1,5 @@
 .idea/*
+.project
 .sass-cache/*
 arch/*
 builder/.sass-cache/*
