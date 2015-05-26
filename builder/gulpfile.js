@@ -40,6 +40,7 @@ var path = {
         add_files: '../build/'
     },
     src: {
+        src: '../src/',
         html: '../src/*.html',
         css: '../src/css/style.scss',
         js: {
@@ -195,7 +196,7 @@ gulp.task('fonts:build', function() {
 
 //Additinal files build
 gulp.task('add-files:build', function() {
-    gulp.src(path.src.add_files)
+    gulp.src([path.src.add_files, path.src.src + 'add-files/*.{ico,png,txt}', path.src.src + 'add-files/.htaccess'])
         .pipe(gulp.dest(path.build.add_files));
 })
 
@@ -206,7 +207,7 @@ gulp.task('php:build', function() {
 })
 
 //Create zip file
-gulp.task('zip', function () {
+gulp.task('zip', function() {
     return gulp.src('../build/**/*.*')
         .pipe(plugins.zip('build.zip'))
         .pipe(gulp.dest('../'));
@@ -223,7 +224,7 @@ gulp.task('clean', function(cb) {
 
 //All build task
 gulp.task('build', [
-	'sprite',
+    'sprite',
     'html:build',
     'js:build',
     'css:build',
@@ -235,7 +236,7 @@ gulp.task('build', [
 
 //Develop build task
 gulp.task('dev', [
-	'sprite',
+    'sprite',
     'html:dev',
     'js:dev',
     'css:dev',
