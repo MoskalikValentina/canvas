@@ -118,7 +118,10 @@ gulp.task('css:build', function() {
         .pipe(plugins.plumber())
     return plugins.sass(path.src.css)
         .pipe(plugins.prefixer())
+        .pipe(plugins.rename('style.dist.css'))
+        .pipe(gulp.dest(path.build.css))
         .pipe(plugins.cssmin())
+        .pipe(plugins.rename('style.css'))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true
@@ -143,9 +146,12 @@ gulp.task('js:build', function() {
     gulp.src(path.src.js.def)
         .pipe(plugins.plumber())
         .pipe(plugins.rigger())
+        .pipe(plugins.rename('script.dist.js'))
+        .pipe(gulp.dest(path.build.js))
         .pipe(plugins.uglify({
             mangle: false //Need for angular normal work. Off renaming
         }))
+        .pipe(plugins.rename('script.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
             stream: true
