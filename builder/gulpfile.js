@@ -23,7 +23,9 @@ var plugins = {
     'rimraf': require('rimraf'),
     'plumber': require('gulp-plumber'),
     'zip': require('gulp-zip'),
-    'spritesmith': require('gulp.spritesmith')
+    'spritesmith': require('gulp.spritesmith'),
+    'ttf2woff': require('gulp-ttf2woff'),
+    'ttf2eot': require('gulp-ttf2eot')
 }
 
 var reload = plugins.browserSync.reload;
@@ -196,9 +198,14 @@ gulp.task('img:dev', function() {
 })
 
 gulp.task('fonts:build', function() {
-    gulp.src(path.src.fonts)
+    gulp.src("../src/fonts/*.ttf")
         .pipe(gulp.dest(path.build.fonts))
-});
+        .pipe(plugins.ttf2eot())
+        .pipe(gulp.dest(path.build.fonts));
+    gulp.src("../src/fonts/*.ttf")
+        .pipe(plugins.ttf2woff())
+        .pipe(gulp.dest(path.build.fonts));
+})
 
 //Additinal files build
 gulp.task('add-files:build', function() {
