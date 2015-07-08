@@ -1,0 +1,209 @@
+.form {
+    @extend .wrapper;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.29);
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+
+//Registration form
+.form-reg {
+    @extend .form;
+    .blk-ttl {
+        color: #dd0337;
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+    .blk-subttl {
+        font-size: 14px;
+        padding-bottom: 14px;
+    }
+}
+
+.form-w {
+    padding-left: 314px;
+    border-bottom: 1px dotted #b2b2b2;
+    padding-right: 91px;
+    overflow: hidden;
+}
+
+.reg-date {
+    @extend .flag-date;
+    position: absolute;
+    z-index: 999;
+    left: 28px;
+    top: -12px;
+}
+
+.reg-priced {
+    font-family: HelveticaBold;
+    font-size: 15px;
+    text-transform: uppercase;
+    float: left;
+    width: 34%;
+    padding-top: 2.4em;
+    padding-bottom: 46px;
+}
+
+.reg-price {
+    font-family: HelveticaBold;
+    font-size: 51px;
+    color: #036add;
+    float: right;
+    line-height: 2;
+}
+
+.form-labels {
+    float: left;
+    width: 27%;
+    font-family: HelveticaBold;
+    padding-top: 6px;
+    .form-label {
+        padding-left: 69px;
+        padding-top: 36px;
+    }
+    .form-alabel {
+        @extend .form-label;
+        padding-bottom: 35px;
+        line-height: 1.2;
+    }
+}
+
+.form-inputs {
+    float: right;
+    width: 73%;
+    padding-top: 14px;
+}
+
+.form-input {
+    height: 21px;
+    width: 90.5%;
+    margin-top: 19px;
+    padding: 4px 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dedede;
+    border-radius: 3px;
+    padding-left: 1em;
+}
+
+.form-area {
+    @extend .form-input;
+    height: 95px;
+}
+
+.form-select {
+    @extend .form-input;
+    height: 30px;
+    width: 92%;
+    margin-top: 10px;
+}
+
+.form-error {
+    padding: 23px 0px;
+    color: #e12339;
+}
+
+.form-footer {
+    width: 100%;
+    background: #eaeaea;
+    overflow: hidden;
+}
+
+.form-btn {
+    font-size: 29px;
+    text-decoration: none;
+    background: #e12339;
+    float: right;
+    margin: 29px 69px 24px 0px;
+    &:hover {
+        background: darken(#e12339, 15);
+    }
+}
+
+.form-rule {
+    padding-top: 47px;
+    padding-left: 146px;
+    display: inline-block;
+    position: relative;
+    &:before {
+        content: '';
+        @extend .s-for-yes;
+        position: absolute;
+        left: 75px;
+    }
+}
+
+.form-regwi {
+    @extend .form;
+    .form-w {
+        padding: 39px 71px 26px 59px;
+    }
+    .blk-ttl {
+        color: #036add;
+    }
+    .blk-subttl {
+        font-size: 14px;
+        padding-top: 19px;
+    }
+    .prog-wLeft {
+        width: 60%;
+    }
+    .prog-ttl {
+        span {
+            color: #036add;
+        }
+    }
+    .prog-list {
+        padding-top: 16px;
+    }
+    .reg-priced {
+        width: 27%;
+        text-align: right;
+        padding-left: 17%;
+    }
+    .reg-price {
+        width: 55%;
+        text-align: left;
+    }
+    .form-error {
+        padding-top: 12px;
+        padding-bottom: 0;
+    }
+}
+
+.send-pr {
+    background: #036add;
+    font-size: 24px;
+    position: relative;
+    top: 40px;
+    &:hover {
+        background: darken(#036add, 15)
+    }
+}
+
+.error {
+    border-color: #ea6372;
+}
+
+.form-ok {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.29);
+    text-align: center;
+    background: white;
+    .form-w {
+        padding: 20px;
+    }
+}
+
+.ajax-loader {
+    width: 100%;
+    height: 100%;
+    background: url(../images/design/ajax-loader.gif)no-repeat 50% 50%;
+    position: absolute;
+    display: none;
+}

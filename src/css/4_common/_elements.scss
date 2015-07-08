@@ -1,0 +1,115 @@
+body {
+    font-size: $base-font-size;
+    font-family: 'Helvetica';
+    margin: 0;
+}
+
+.wrapper {
+    width: $base-width;
+    margin: 0 auto;
+    min-width: $base-width;
+}
+
+p {
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    border-top: 1px dotted #b2b2b2;
+    padding-top: 18px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    .menu-item {
+        display: inline-block;
+        padding: 0px 2.5% 0px 2%;
+        border-right: 1px dotted #b2b2b2;
+        &:first-of-type {
+            padding-left: 0;
+        }
+        &:last-of-type {
+            border: none;
+            padding-right: 0;
+        }
+        a {
+            font-family: "HelveticaBold";
+            text-decoration: none;
+            font-size: 27px;
+            color: black;
+            &:hover {
+                color: grey;
+            }
+        }
+    }
+}
+
+.flag-bg {
+    background: url('../images/design/flag-bg.jpg') no-repeat;
+    background-size: cover;
+    min-width: $base-width;
+    
+}
+
+.wh-line {
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'pf';
+    color: #424242;
+    font-size: 18px;
+    padding: 0.5em 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.18px;
+}
+
+.btn {
+    border-radius: 12px;
+    font-size: 36.87px;
+    font-family: 'pf';
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+}
+
+.blk-line {
+    @extend .wrapper;
+    font-size: 18px;
+    font-family: "PF";
+    color: rgb(66, 66, 66);
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px dotted #b2b2b2;
+    height: 7px;
+    span {
+        background: white;
+        padding: 0em 1em;
+    }
+}
+
+.btn-blk {
+    @extend .wrapper;
+    text-align: center;
+    border-bottom: 1px dotted #b2b2b2;
+    height: 14.5px;
+    margin-top: 80px;
+    margin-bottom: 126px;
+
+    .btn{
+        font-size: 29px;
+    }
+}
+
+.blk-ttl {
+    font-size: 53px;
+    font-family: "HelveticaBold";
+    color: rgb(42, 135, 85);
+}
+
+.blk-subttl {
+    font-size: 21px;
+    font-family: "HelveticaBold";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+}

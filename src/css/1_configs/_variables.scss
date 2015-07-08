@@ -1,0 +1,14 @@
+/* Fonts */
+@include add-font('../fonts/HelveticaNeueCyr-Bold_gdi', 'HelveticaBold');
+@include add-font('../fonts/HelveticaNeueCyr-Italic_gdi', 'HelveticaItalic');
+@include add-font('../fonts/HelveticaNeueCyr-Light_gdi', 'HelveticaLight');
+@include add-font('../fonts/HelveticaNeueCyr-Roman_gdi', 'Helvetica');
+@include add-font('../fonts/PFDinTextCompPro-Thin_gdi', 'PFLight');
+@include add-font('../fonts/PFDinTextCompPro-Regular_gdi', 'PF');
+
+/* Colors */  
+
+
+/* Sizes */
+$base-font-size: 14px;
+$base-width: 1180px;

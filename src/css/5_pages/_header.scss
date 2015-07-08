@@ -1,0 +1,113 @@
+.h-line {
+    width: 100%;
+    background: url('../images/design/top-line.png') no-repeat;
+    height: 6px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 21.4%;
+    border-right: 1px solid #e2e2e3;
+    display: inline-block;
+
+    a{
+        text-decoration: none;
+        color: black;
+        &:hover{
+            text-decoration: none;
+            color: grey;
+        }
+    }
+}
+
+.logo-txt {
+    font-family: "HelveticaLight";
+    font-size: 10px;
+    color: #505050;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+}
+
+.logo-date {
+    font-family: 'pf';
+    font-size: 51px;
+    text-transform: uppercase;
+    padding-right: 4px;
+}
+
+.logo-city {
+    font-size: 34px;
+    font-family: 'pfLight';
+    color: #ff2405;
+    text-transform: uppercase;
+    position: relative;
+    top: -12px;
+}
+
+.theme {
+    width: 23.5%;
+    display: inline-block;
+    border-right: 1px solid #e2e2e3;
+    vertical-align: top;
+    padding: 0px 24px;
+}
+
+.theme-ttl {
+    @extend .logo-txt;
+    padding-bottom: 1.2em;
+}
+
+.theme-txt {
+    font-family: 'HelveticaBold';
+    font-size: 11px;
+    color: #8d8d8d;
+    text-transform: uppercase;
+}
+
+.place {
+    width: 26%;
+    display: inline-block;
+    border-right: 1px solid #e2e2e3;
+    vertical-align: top;
+    padding: 0px 21px;
+}
+
+.place-ttl {
+    @extend .logo-txt;
+    padding-bottom: 3px;
+}
+
+.place-logo {
+    width: 123px;
+    height: 48px;
+    float: left;
+}
+
+.place-txt {
+    font-family: 'HelveticaBold';
+    font-size: 11px;
+    color: black;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-left: 6px;
+    line-height: 1.2;
+}
+
+.phone {
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.phone-ttl {
+    @extend .logo-txt;
+}
+
+.phone-code {
+    @extend .logo-city;
+}
+
+.phone-phone {
+    @extend .logo-date;
+}

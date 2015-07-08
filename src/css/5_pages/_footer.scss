@@ -1,0 +1,22 @@
+footer {
+    @extend .wrapper;
+    padding-bottom: 50px;
+    .menu {
+        border-bottom: 1px dotted #b2b2b2;
+        padding-bottom: 14px;
+        margin-bottom: 33px;
+    }
+}
+
+.footer-txt {
+    width: 29%;
+    display: inline-block;
+    font-family: "HelveticaBold";
+    font-size: 16px;
+    padding-left: 55px;
+    padding-right: 19.7%;
+    vertical-align: top;
+    padding-top: 0px;
+    line-height: 1.2; 
+    
+}
