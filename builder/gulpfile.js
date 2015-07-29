@@ -289,7 +289,7 @@ gulp.task('watch', function() {
 });
 
 //Default task
-gulp.task('default', ['dev', 'webserver', 'watch']);
+gulp.task('default', ['dev', 'watch']);
 
 //.htaccess move
 //todo add it to task
