@@ -5,4 +5,4 @@
 //= libs/plugins.js
 
 //Site script
-//= main.js
+//= script/main.js

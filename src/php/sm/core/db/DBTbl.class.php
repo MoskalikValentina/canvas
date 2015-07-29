@@ -32,7 +32,11 @@ class DBTbl
 	function write($record){
 		$req = $this->prepearRequest($record);
 		$this->db_connect->DBSel();
-		return mysql_query($req);
+		if(mysql_query($req)){
+			return mysql_insert_id();
+		} else {
+			return fasle;
+		}
 	}
 
 	/**
@@ -81,7 +85,7 @@ class DBTbl
 	}
 
 	/**
-	 * Read field frome current DB
+	 * Read field from current DB
 	 * All params must be clearing before
 	 * @param string $col_name Name of table column
 	 * @param string @col_value Name of field value

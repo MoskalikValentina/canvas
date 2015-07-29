@@ -3,6 +3,7 @@
  */
 
 // todo Need to write Readmen.txt
+//todo Make send mail with template
 
 class Mailer{
     private $config_path;
@@ -13,7 +14,7 @@ class Mailer{
 
     }
 
-    /*
+    /**
      * Load classes and config mailer
      * @param $conf_path String path to conf file
      */
@@ -29,7 +30,7 @@ class Mailer{
         $config->configMailer($this->mailer);
     }
 
-    /*
+    /**
      * Send mail
      */
     public function send_email($subject = 'Here is the subject', $body = 'This is the HTML message body'){
@@ -50,6 +51,27 @@ class Mailer{
         } else {
             if($this->mailer->SMTPDebug === 3){
                 echo 'Message has been sent';
+            }
+        }
+    }
+
+    /**
+     * @param String $attachment_path Path to attachment file
+     */
+    public function attachmentAdd($attachment_path){
+        if(file_exists($attachment_path)){
+            $this->mailer->AddAttachment($attachment_path);
+        }
+    }
+
+    /**
+     * @param array $addresses
+     */
+    public function changeAddresses(Array $addresses){
+        if(count($addresses) > 0){
+            $this->mailer->clearAddresses();
+            foreach($addresses as $email){
+                $this->mailer->addAddress($email);
             }
         }
     }

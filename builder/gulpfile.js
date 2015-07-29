@@ -107,6 +107,7 @@ gulp.task('sprite', function() {
     var spriteData = gulp.src(path.src.sprites).pipe(plugins.spritesmith({
         imgName: '../img/sprite.png',
         cssName: '_sprite.scss',
+        padding: '5',
         cssVarMap: function(sprite) {
             sprite.name = 's-' + sprite.name
         }

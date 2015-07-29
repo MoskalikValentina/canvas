@@ -36,14 +36,14 @@ class ProductImgExportController {
 
         //Add files to zip
         foreach ($products as $product) {
-        	$img_path = str_replace(array("\r\n", "\r", "\n"), '', $product['image']); //Remove newline sings //todo add it to unput line cleaner
+            $img_path = str_replace(array("\r\n", "\r", "\n"), '', $product['img']); //Remove newline sings //todo add it to unput line cleaner
             $img_zip->add_file($img_path); //todo Use there variable from config
         }
 
         //save and return
         $img_zip->save();
-        echo $file_path = $export_path . $export_file_name; //todo Move link echo into engine.php
-        //return
+        $file_path = $export_path . $export_file_name;
+        return $file_path;
 
     }
 }

@@ -26,6 +26,15 @@ class ViewController {
     }
 
     /**
+     * @return string All products in JSON
+     */
+    public function get_all_JSON(){
+        $all_products = $this->get_all();
+        $all_in_JSON = json_encode($all_products);
+        return $all_in_JSON;
+    }
+
+    /**
      * Get products from DB and set $this->products
      * @return array with products list
      */

@@ -13,6 +13,13 @@ class AuthController {
         $this->config = $config;
     }
 
+    /**
+     * Check user credentials
+     *
+     * @param $name
+     * @param $password
+     * @return bool
+     */
     public function log_in($name, $password){
         $res = false;
         //Get data from DB
@@ -29,13 +36,19 @@ class AuthController {
 
         $access_tbl = $this->config->req_tbl_name();
         if($user){
-            if($user[0]['password'] === $password && $user[0]['access_tbl'] === $access_tbl){
+            if($user[0]['password'] === crypt($password, $user[0]['password']) && $user[0]['access_tbl'] === $access_tbl){
                 $_SESSION['login'] = true;
                 $_SESSION['id'] = $user[0]['id'];
                 $res = true;
             }
         }
-
         return $res;
+    }
+
+    /**
+     * Logout user
+     */
+    public static function log_out(){
+        unset($_SESSION['login'], $_SESSION['id']);
     }
 } 

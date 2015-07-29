@@ -40,11 +40,7 @@ class ExportController {
             $exporter->export();
 
             //Return full file path
-            $exp_file_path = CLEAR_REQUEST_URI . $exp_path . $exp_filename;
+            $exp_file_path = '/' . $exp_path . $exp_filename;
             return $exp_file_path;
-
     }
-
-
-
 } 

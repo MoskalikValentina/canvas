@@ -2,9 +2,15 @@
 /**
  * Request object
  */
-header("Content-type: text/html; charset=utf-8");
+
 class Request {
+    /**
+     * @var array
+     */
     private $request_data = array();
+    /**
+     * @var array
+     */
     private $request_structure = array();
 
     /**
@@ -20,10 +26,10 @@ class Request {
         }
     }
 
-    /*
+    /**
      * Return data as array or as string
      * @param $data_name String Name of data param for return. Use optional
-     * return Array with all data or string with field
+     * @return Array with all data or string with field
      */
     public function get_data($data_name = ''){
         if($data_name !== ''){
@@ -38,94 +44,48 @@ class Request {
      * Return subject for email sending
      */
 
+    /**
+     * @return string
+     */
     public function get_subject(){
         return "Новая заявка (" . date("d.m.Y H:i") . ")";
     }
 
-    /*
+    /**
      * Return prepared for send mail html body
+     * @param bool $is_template
+     * @param string $template_path
+     * @return string
      */
-    public function get_mail(){
-        $message = '<h4>Заявка от ' . date("d.m.Y H:i") . '</h4>'.
-            'Имя клиента: ' . $_POST["name"] . '<br>' .
-            'Номер телефона: ' . $_POST["phone"] . "<br>";
-
-        if(isset($_POST['name']) && $_POST['name']){
-            $customer_name = $_POST['name'];
-        }
-
-        if(isset($_POST['phone']) && $_POST['phone']){
-            $phone = $_POST['phone'];
-        }
-
-        if(isset($_POST['email']) && $_POST['email'] !=''){
-            $message = $message . 'Электронная почта: <a href="' . $_POST['email'] . '">' . $_POST['email'] . '</a><br>';
-            $email = $_POST['email'];
-        }
-
-        $message = $message . '<br><i>Дополнительная информация</i><br>';
-
-        if(isset($_POST['form_type']) && $_POST['form_type'] !=''){
-            $message = $message . 'Тип заявки: ' . $_POST['form_type'] . '<br>';
-            $form_type = $_POST['form_type'];
-        }
-
-        if(isset($_POST['text']) && $_POST['text'] != ''){
-            $message = $message . 'Комментарий: ' . $_POST['text'];
-            $salon_color =  $_POST['text'];
-        }
-
-       
-
-        if( $form_type=='Корзина'){
-        if ($_POST['payment'] == false) {
-            if(isset($_POST['payment']) && $_POST['payment'] != ''){
-                $message = $message . '<br> Оплата: ' . $_POST['payment'];
-                $salon_color =  $_POST['payment'];
-            }
-
-            if(isset($_POST['delivery']) && $_POST['delivery'] != ''){
-                $message = $message . '<br> Доставка: ' . $_POST['delivery'];
-                $salon_color =  $_POST['delivery'];
-            }
-
-            if(isset($_POST['city']) && $_POST['city'] != ''){
-                $message = $message . '<br> Город: ' . $_POST['city'];
-                $salon_color =  $_POST['city'];
-            }
-
-            if(isset($_POST['number']) && $_POST['number'] != ''){
-                $message = $message . '<br> Номер отделения: ' . $_POST['number'];
-                $salon_color =  $_POST['number'];
-            }
-
-            if(isset($_POST['adress']) && $_POST['adress'] != ''){
-                $message = $message . '<br> Адрес: ' . $_POST['adress'];
-                $salon_color =  $_POST['adress'];
-            }
+    public function get_mail($is_template = false, $template_path = ''){
+        if($is_template){
+            return $this->buildMailWithTemplate($template_path);
         } else {
-             $message = $message . 'Тип заказа: Быстрый ' . $_POST['adress'];
+            return $this->buildBasicMail();
         }
+    }
 
-            $message=$message.'<br><b>Заказ</b><br><table width=50% border=1><th>Артикул</th><th>Название</th><th>Цвет</th><th>Цена</th><th>Кол-во</th><th>Сумма</th>';
-            $test=($_POST['order']);
-            $order=json_decode($test, true);
-            $summ=0;
-            foreach ($order as $value) {   
-                    $message=$message.'<tr>';
-                    $message=$message.'<td>'.$value['article'].'</td>';  
-                    $message=$message.'<td>'.$value['title'].'</td>';
-                    $message=$message.'<td>'.$value['color'].'</td>';
-                    $message=$message.'<td>'.$value['price'].'</td>';  
-                    $message=$message.'<td>'.$value['amount'].'</td>';
-                    $message=$message.'<td>'.$value['amount']*$value['price'].'</td>';   
-                    $message=$message.'</tr>';
-                    $summ=$summ+$value['amount']*$value['price'];
-            };
-            $message=$message.'</table><br><b>Итого: </b>'.$summ;
-
+    /**
+     * Building simple mail body base on request params
+     */
+    protected function buildBasicMail(){
+        $message = '<h4>Заявка от ' . date("d.m.Y H:i") . '</h4>';
+        foreach($this->request_data as $k => $v){
+            if($v !== '')
+                $message .= $this->request_structure[$k][0] . ': ' . $v . '<br>';
         }
 
         return $message;
     }
+
+    /**
+     * Build mail body base on template path for which set in config
+     */
+    protected function buildMailWithTemplate($template_path){
+        require_once $template_path;
+        return $message;
+    }
+
+
+
 }
