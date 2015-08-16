@@ -11,9 +11,9 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*",
-    "jquery-ui": "^1.11.4",
     "gridle": "^1.3.3",
     "magnificPopup" : "git://github.com/dimsemenov/Magnific-Popup.git",
-    "slick": "git://github.com/kenwheeler/slick.git"
+    "slick": "git://github.com/kenwheeler/slick.git",
+    "formSender": "https://bitbucket.org/webmagic/FormSender.git"
   }
 }

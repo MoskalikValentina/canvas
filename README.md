@@ -124,3 +124,8 @@ http://dimsemenov.com/plugins/magnific-popup/
 http://digitalbush.com/projects/masked-input-plugin/
 
 Плагин для полей ввода, для создания телефонной маски.
+
+###FormSender
+https://bitbucket.org/webmagic/formsender/commits/all
+
+Используется для работы с отправкой форм

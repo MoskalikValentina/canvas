@@ -2,8 +2,8 @@
 # | Directory index set                                                  |
 # ----------------------------------------------------------------------
 
-DirectoryIndex index.php
-# DirectoryIndex index.html
+# DirectoryIndex index.php
+DirectoryIndex index.html
 
 # ----------------------------------------------------------------------
 # | Default charset                                                    |
