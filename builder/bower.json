@@ -14,6 +14,7 @@
     "gridle": "^1.3.3",
     "magnificPopup" : "git://github.com/dimsemenov/Magnific-Popup.git",
     "slick": "git://github.com/kenwheeler/slick.git",
-    "formSender": "https://bitbucket.org/webmagic/FormSender.git"
+    "formSender": "https://bitbucket.org/webmagic/FormSender.git",
+    "datetimepicker" :"git://github.com/xdan/datetimepicker"
   }
 }
