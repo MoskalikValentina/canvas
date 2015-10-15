@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // elements
 @import "elements";
 // END elements
@@ -8,3 +9,10 @@
 @import "sprite";
 @include sprites($spritesheet-sprites);
 // END Sprite
+=======
+@import 'sprite';
+//@include sprites($spritesheet-sprites); //Use for sprites
+@import 'elements/elements';
+@import 'blocks/blocks';
+@import 'responsive';
+>>>>>>> a063b470910cb8dd3ceb2d8dc8495a07e11cdd74

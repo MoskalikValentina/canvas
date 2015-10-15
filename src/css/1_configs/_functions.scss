@@ -37,7 +37,11 @@
     background:linear-gradient($start-color, $finish-color) 0 0 repeat;
 }
 
+<<<<<<< HEAD
 //Set border radius
+=======
+//Set border ra
+>>>>>>> a063b470910cb8dd3ceb2d8dc8495a07e11cdd74
 @mixin border-radius($px) {
 	-webkit-border-radius: $px;
     -moz-border-radius: $px;

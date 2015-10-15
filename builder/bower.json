@@ -1,11 +1,6 @@
 {
-  "name": "cinema",
-  "version": "0.0.1",
-  "authors": [
-    "Yevhen Saienko <lead-worker@yandex.ru>"
-  ],
-  "description": "cinema template",
-  "license": "ISC",
+  "name": "ProjectName",
+  "version": "1.0.0",  
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,8 +11,8 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*",
-    "jquery-ui": "^1.11.4",
     "gridle": "^1.3.3",
+<<<<<<< HEAD
     "magnificPopup": "git://github.com/dimsemenov/Magnific-Popup.git",
     "lory": "git://github.com/meandmax/lory.git",
     "slick": "git://github.com/kenwheeler/slick.git"
@@ -25,4 +20,11 @@
   "moduleType": [
     "node"
   ]
+=======
+    "magnificPopup" : "git://github.com/dimsemenov/Magnific-Popup.git",
+    "slick": "git://github.com/kenwheeler/slick.git",
+    "formSender": "https://bitbucket.org/webmagic/FormSender.git",
+    "datetimepicker" :"git://github.com/xdan/datetimepicker"
+  }
+>>>>>>> a063b470910cb8dd3ceb2d8dc8495a07e11cdd74
 }

@@ -1,9 +1,6 @@
 {
-  "name": "cinema",
-  "version": "1.0.3",
-  "description": "cinema template",
-  "author": "Yevhen Saienko",
-  "license": "ISC",
+  "name": "PackgeName",
+  "version": "1.0.0",
   "dependencies": {
     "gulp": "^3.8.11",
     "gulp-rename": "^1.2.2",
@@ -21,11 +18,20 @@
     "browser-sync": "^2.2.3",
     "rimraf": "^2.3.1",
     "gulp-plumber": "^1.0.0",
+<<<<<<< HEAD
     "gulp-zip": "^3.0.2"
   },
   "devDependencies": {
     "gulp-filter": "^2.0.2",
     "gulp-load-plugins": "^0.10.0",
     "main-bower-files": "^2.6.2"
+=======
+    "gulp-zip": "^3.0.2",
+    "gulp.spritesmith": "^3.5.4",
+    "gulp-ttf2eot": "^1.0.2",
+    "gulp-ttf2woff": "^1.0.2"
+  },
+  "devDependencies": {
+>>>>>>> a063b470910cb8dd3ceb2d8dc8495a07e11cdd74
   }
 }

@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:AddToCalendar.com
+BEGIN:VEVENT
+UID:5532cbb9b6c1f
+DTSTAMP;TZID=UTC:20150418T212513
+DTSTART;TZID=UTC:20150607T060000
+SEQUENCE:0
+TRANSP:OPAQUE
+DTEND;TZID=UTC:20150607T140000
+LOCATION:Crowne Plaza
+SUMMARY:ОДНОДНЕВНЫЙ СЕМИНАР-ИНТЕНСИВ
+DESCRIPTION:21 СХЕМА НЕДОБРОСОВЕСТНОЙ КОНКУРЕН
+ 
+ ЦИИ В ГОСЗАКАЗЕ\, ТЕНДЕРАХ И КОММЕРЧЕСК
+ И
+ Х ЗАКУПКАХ. СПОСОБЫ БОРЬБЫ С НИМИ.\n\n--\n
+END:VEVENT
+END:VCALENDAR

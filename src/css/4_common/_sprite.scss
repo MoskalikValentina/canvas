@@ -11,6 +11,7 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+<<<<<<< HEAD
 $s-agree-name: 's-agree';
 $s-agree-x: 224px;
 $s-agree-y: 101px;
@@ -390,6 +391,24 @@ $spritesheet-height: 246px;
 $spritesheet-image: '../images/sprite.png';
 $spritesheet-sprites: ($s-agree, $s-com-next, $s-com-prev, $s-dot-active, $s-dot, $s-download, $s-email, $s-faq-i1, $s-for-grey, $s-for-no, $s-for-yes, $s-how-i1, $s-how-i2, $s-how-i3, $s-past-i1, $s-past-i10, $s-past-i11, $s-past-i12, $s-past-i2, $s-past-i3, $s-past-i4, $s-past-i5, $s-past-i6, $s-past-i7, $s-past-i8, $s-past-i9, $s-phone, $s-where-i1, $s-where-i2, $s-where-i3, $s-where-i4, $s-who-i1, $s-who-i2, $s-who-i3, );
 $spritesheet: (315px, 246px, '../images/sprite.png', $spritesheet-sprites, );
+=======
+$s-info-name: 's-info';
+$s-info-x: 0px;
+$s-info-y: 0px;
+$s-info-offset-x: 0px;
+$s-info-offset-y: 0px;
+$s-info-width: 15px;
+$s-info-height: 15px;
+$s-info-total-width: 15px;
+$s-info-total-height: 15px;
+$s-info-image: '../img/sprite.png';
+$s-info: (0px, 0px, 0px, 0px, 15px, 15px, 15px, 15px, '../img/sprite.png', 's-info', );
+$spritesheet-width: 15px;
+$spritesheet-height: 15px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($s-info, );
+$spritesheet: (15px, 15px, '../img/sprite.png', $spritesheet-sprites, );
+>>>>>>> a063b470910cb8dd3ceb2d8dc8495a07e11cdd74
 
 /*
 The provided mixins are intended to be used with the array-like variables
