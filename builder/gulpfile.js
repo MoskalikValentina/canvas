@@ -33,13 +33,13 @@ var reload = plugins.browserSync.reload;
 //Path config
 var path = {
     build: {
-        html: '../build/',
-        css: '../build/css/',
-        js: '../build/js/',
-        img: '../build/img/',
-        fonts: '../build/fonts/',
-        php: '../build/',
-        add_files: '../build/'
+        html: '../',
+        css: '../css/',
+        js: '../js/',
+        img: '../img/',
+        fonts: '../fonts/',
+        php: '../',
+        add_files: '../'
     },
     src: {
         src: '../src/',
@@ -72,7 +72,7 @@ var path = {
 
 var serv_config = {
     server: {
-        baseDir: "../build/"
+        baseDir: "../"
     },
     tunnel: true,
     host: 'localhost',
@@ -137,6 +137,7 @@ gulp.task('css:dev', function() {
             sourcemap: true
         })
         .pipe(plugins.cssmin())
+        .pipe(plugins.prefixer())
         .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
@@ -221,7 +222,7 @@ gulp.task('php:build', function() {
 
 //Create zip file
 gulp.task('zip', function() {
-    return gulp.src('../build/**/*.*')
+    return gulp.src([path.build.html+'*/**', '!'+path.build.html+'*/builder'], {base: "../"})
         .pipe(plugins.zip('build.zip'))
         .pipe(gulp.dest('../'));
 });

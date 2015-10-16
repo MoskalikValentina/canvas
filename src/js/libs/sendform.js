@@ -4,7 +4,6 @@
         var form = this;
         var settings = $.extend({
             'url': '',
-            'method': 'POST',
             'reset': true,
             'className': 'error',
             'statusId': 'form-status',
@@ -13,33 +12,24 @@
             'msgSend': 'Отправка данных',
             'msgDone': 'Данные успешно отправлены',
             'msgError': 'Ошибка отправки',
-            'msgValError': 'Обзательное поле не заполнено',
+            'msgValError': 'Одно из полей не заполено',
+            'spinnerColor': '#000',
             'formPosition': 'relative',
-            'success': function() {
-
-            }
+            'success': function(data) {}
         }, options);
-        var statusId = '#' + settings.statusId;
 
+        var statusId = '.' + settings.statusId;
 
-
-        //Init function
         var init = function() {
             //Check if form have action url, send request to it
-            if ($(form).attr('action') !== undefined && $(form).attr('action').length > 0) settings.url = $(form).attr('action');
-
-            //Check if form have action url, send request to it
-            if ($(form).attr('method') !== undefined && $(form).attr('method').length > 0) settings.method = $(form).attr('method');
+            if ($(form).attr('action') != undefined && $(form).attr('action').length > 0) settings.url = $(form).attr('action');
 
             //Find all required input and add clas to them
-            $(form).find('input')
-                .filter('[required]')
-                .addClass('form-required')
-                .removeAttr('required');
+            $(form).find('*').filter('[required]').addClass('form-required').removeAttr('required')
 
             //Add status string
             if ($(statusId).length < 1) {
-                $(form).append('<span id="' + settings.statusId + '"></span>');
+                $(form).append('<span class="' + settings.statusId + '"></span>');
             }
         }
 
@@ -48,16 +38,21 @@
             $(statusId).text(settings.msgSend);
             //Disable form button
             $(form).find('button').attr('disabled', 'true');
-            //Add grey form hover
+            //Add form hover
             $(form).append('<div id="formsendHover"><div class="form-loading"></div></div>').css('position', settings.formPosition);
+            $('.form-loading').css({
+                'border-color': settings.spinnerColor,
+                "border-top-color": 'transparent',
+                'border-right-color': 'transparent'
+            });
         }
 
         //Succes form sending
-        var successSend = function() {
+        var successSend = function(data) {
             if (settings.reset) {
                 resetForm(form);
             }
-            settings.success();
+            settings.success(data);
 
             //Delete form hover
             $('#formsendHover').remove();
@@ -65,7 +60,7 @@
             $(statusId).text(settings.msgDone);
 
             //Enable button
-            $(form).children('button').removeAttr('disabled');
+            $(form).find('button').removeAttr('disabled');
 
             //Clear status string after 3 second
             setTimeout(function() {
@@ -84,6 +79,14 @@
             }
         }
 
+
+        var errorSend = function() {
+            $(statusId).text(settings.msgError);
+            $('#formsendHover').remove();
+            //Enable button
+            $(form).children('button').removeAttr('disabled');
+        }
+
         init();
 
         //Forms new submit
@@ -97,24 +100,24 @@
         function sendForm(input_form) {
             var form = $(input_form);
             var error = false;
-            form.find('input').each(function() {
+            form.find('input, textarea').each(function() {
                 if (validate(this)) {
                     error = true;
                 }
             });
             //Send data
             if (!error) {
-                var str = form.serialize();
                 sendInit();
+                var str = form.serialize();
                 $.ajax({
-                    type: settings.method,
+                    type: 'POST',
                     url: settings.url,
                     data: str,
-                    success: function() {
-                        successSend();
+                    success: function(data) {
+                        successSend(data);
                     }
                 }).fail(function() {
-                    $(statusId).text(settings.msgError);
+                    errorSend();
                 });
             }
         }
@@ -138,8 +141,24 @@
                 $(obj).removeClass(settings.className);
             }
 
+            if ($(obj).attr('name') == 'url' && !isUrl($(obj))) {
+                $(obj).addClass(settings.className);
+                error = true;
+            } else if ($(obj).attr('name') == 'url') {
+                $(obj).removeClass(settings.className);
+            }
+
+
+            if ($(obj).hasClass('cyr-validation') && !isCyr($(obj))) {
+                $(obj).addClass(settings.className);
+                error = true;
+            } else if ($(obj).hasClass('cyr-validation')) {
+                $(obj).removeClass(settings.className);
+            }
+
             return error;
         }
+
 
         //Is on no empty value testing
         function noEmpty(element) {
@@ -156,11 +175,42 @@
             return email.test($(element).val());
         }
 
+        //Is url testing
+        function isUrl(element) {
+            var url = /[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}/;
+            return url.test($(element).val());
+        }
+
+        //Is min 5 charachter
+        function minLength(element) {
+            console.log(element);
+            if ($(element).val().length > 5)
+                return true;
+        }
+
         //Form reset
         function resetForm(input_form) {
             var form = $(input_form);
             form.find('input[type=text],input[type=tel],input[type=email],textarea').val('');
             form.find('input:checkbox, input:radio').removeAttr('checked');
+        }
+
+        //Is url testing
+        function isUrl(element) {
+            var url = /[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}/;
+            return url.test($(element).val());
+        }
+
+        //Is min 5 charachter
+        function minLength(element) {
+            if ($(element).val().length > 5)
+                return true;
+        }
+
+        //Is cyrillic testing
+        function isCyr(element) {
+            var cyr = /[\u0400-\u04FF]/gi;
+            return cyr.test($(element).val())
         }
 
     };
