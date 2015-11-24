@@ -80,7 +80,7 @@ var serv_config = {
     logPrefix: "Frontend_Devil"
 };
 
-//Tasks
+
 gulp.task('html:build', function() {
     gulp.src(path.src.html)
         .pipe(plugins.plumber())
@@ -222,7 +222,9 @@ gulp.task('php:build', function() {
 
 //Create zip file
 gulp.task('zip', function() {
-    return gulp.src([path.build.html+'*/**', '!'+path.build.html+'*/builder'], {base: "../"})
+    return gulp.src([path.build.html + '*/**', '!' + path.build.html + '*/builder'], {
+            base: "../"
+        })
         .pipe(plugins.zip('build.zip'))
         .pipe(gulp.dest('../'));
 });
