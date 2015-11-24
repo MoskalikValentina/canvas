@@ -55,3 +55,12 @@ SCSS фреймворк для создания адаптивной сетки.
 
 Позволяет создавать всплывающие окна и галереи.
 
+###DateTimePicker
+#####Используемая версия - 2.5.1
+
+#####Ссылки:
+* [http://xdsoft.net/jqplugins/datetimepicker/](http://xdsoft.net/jqplugins/datetimepicker/)
+* [https://github.com/xdan/datetimepicker](https://github.com/xdan/datetimepicker)
+
+Выбор даты и времени
+
