@@ -37,9 +37,7 @@ var path = {
         css: '../css/',
         js: '../js/',
         img: '../img/',
-        fonts: '../fonts/',
-        php: '../',
-        add_files: '../'
+        fonts: '../fonts/'
     },
     src: {
         src: '../src/',
@@ -53,9 +51,7 @@ var path = {
         },
         img: '../src/img/**/*.*',
         fonts: '../src/fonts/**/*.*',
-        php: '../src/php/**/*.*',
-        sprites: '../src/img/sprites/*.*',
-        add_files: '../src/add-files/**/*.*'
+        sprites: '../src/img/sprites/*.*'
     },
     watch: {
         html: '../src/*.html',
@@ -63,9 +59,7 @@ var path = {
         js: '../src/js/**/*.js',
         img: '../src/img/**/*.*',
         fonts: '../src/fonts/**/*.*',
-        php: '../src/php/**/*.*',
-        sprite: '../src/img/sprites/*.*',
-        add_files: '../src/add-files/**/*.*'
+        sprite: '../src/img/sprites/*.*'
     },
     clean: '../build/'
 };
@@ -208,17 +202,6 @@ gulp.task('fonts:build', function() {
         .pipe(gulp.dest(path.build.fonts));
 })
 
-//Additinal files build
-gulp.task('add-files:build', function() {
-    gulp.src([path.src.add_files, path.src.src + 'add-files/*.{ico,png,txt}', path.src.src + 'add-files/.htaccess'])
-        .pipe(gulp.dest(path.build.add_files));
-})
-
-//PHP build
-gulp.task('php:build', function() {
-    gulp.src(path.src.php)
-        .pipe(gulp.dest(path.build.php));
-})
 
 //Create zip file
 gulp.task('zip', function() {
@@ -245,9 +228,7 @@ gulp.task('build', [
     'js:build',
     'css:build',
     'fonts:build',
-    'img:build',
-    'add-files:build',
-    'php:build',
+    'img:build'
 ]);
 
 //Develop build task
@@ -257,9 +238,7 @@ gulp.task('dev', [
     'js:dev',
     'css:dev',
     'fonts:build',
-    'img:dev',
-    'add-files:build',
-    'php:build',
+    'img:dev'
 ]);
 
 //Watch task
@@ -282,20 +261,7 @@ gulp.task('watch', function() {
     plugins.watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });
-    plugins.watch([path.watch.add_files], function(event, cb) {
-        gulp.start('add-files:build');
-    });
-    plugins.watch([path.watch.php], function(event, cb) {
-        gulp.start('php:build');
-    });
 });
 
 //Default task
 gulp.task('default', ['dev', 'watch']);
-
-//.htaccess move
-//todo add it to task
-gulp.task('htaccess', function() {
-    gulp.src('../src/add-files/**/.*')
-        .pipe(gulp.dest('../build/'))
-})

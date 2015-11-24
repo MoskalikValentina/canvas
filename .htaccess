@@ -1,19 +1,4 @@
 # ----------------------------------------------------------------------
-# | Rewrite for routing                                                |
-# ----------------------------------------------------------------------
-<IfModule mod_rewrite.c>
-    Options -MultiViews
-
-    RewriteEngine On
-
-    #if installed in subdirectory
-    #RewriteBase /build/
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
-</IfModule>
-
-# ----------------------------------------------------------------------
 # | Default charset                                                    |
 # ----------------------------------------------------------------------
 
