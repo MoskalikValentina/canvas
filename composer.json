@@ -1,0 +1,17 @@
+{
+    "name": "webmagic/gulp-builder",
+    "description": "Build system for front-end projects",
+    "authors": [
+        {
+            "name": "Yevhen Saienko",
+            "email": "lead-worker@yandex.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "scripts" : {
+       "post-package-install" : [
+          "php -r \"copy('robots.txt', 'config/_robots.t');\""
+       ]
+    }
+}

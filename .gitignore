@@ -2,3 +2,4 @@
 _gulp-builder/.sass-cache/*
 _gulp-builder/node_modules/*
 _gulp-builder/bower_components/*
+/vendor/
