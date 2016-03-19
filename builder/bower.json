@@ -1,6 +1,6 @@
 {
   "name": "ProjectName",
-  "version": "1.0.0",  
+  "version": "1.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -11,7 +11,8 @@
   "dependencies": {
     "jquery": "2.*",
     "magnificPopup": "git://github.com/dimsemenov/Magnific-Popup.git",
-    "slick": "git://github.com/kenwheeler/slick.git"
+    "slick": "git://github.com/kenwheeler/slick.git",
+    "meyer-reset": "*"
   },
   "moduleType": [
     "node"

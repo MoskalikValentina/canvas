@@ -24,7 +24,7 @@ var path = {
         zip: build_dir + '/'
     },
     src: {
-        css: src_dir + '/css/' + scss_main_file_name,
+        css: src_dir + '/sass/' + scss_main_file_name,
         js: src_dir + '/js/*.js',
         img: src_dir + '/img/**/*.*',
         fonts: src_dir + '/fonts/*.ttf',
@@ -32,7 +32,7 @@ var path = {
         zip: [build_dir + '/**', '!' + build_dir + '/builder/node_modules/**', '!' + build_dir + '/builder/bower_components/**']
     },
     watch: {
-        css: src_dir + '/css/**/*.scss',
+        css: src_dir + '/sass/**/*.*',
         js: src_dir + '/js/**/*.js',
         img: src_dir + '/img/**/*.*',
         fonts: src_dir + '/fonts/**/*.*',
