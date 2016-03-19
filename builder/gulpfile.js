@@ -69,7 +69,8 @@ var plugins = {
     'spritesmith': require('gulp.spritesmith'),
     'ttf2woff': require('gulp-ttf2woff'),
     'ttf2eot': require('gulp-ttf2eot'),
-    'debug' : require('gulp-debug')
+    'debug' : require('gulp-debug'),
+    'ts' : require('gulp-typescript')
 };
 
 /***********************************************************************************************************************
@@ -106,6 +107,7 @@ gulp.task('html:build', function() {
         .pipe(plugins.rigger())
         .pipe(plugins.versionAppend(['html', 'js', 'css']))
         .pipe(plugins.htmlclean())
+        .pipe(plugins.plumber.stop())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({
             stream: true
