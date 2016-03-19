@@ -10,7 +10,7 @@
     "minimum-stability": "stable",
     "require": {},
     "scripts" : {
-       "post-package-install" : [
+       "post-update-cmd" : [
           "php -r \"copy('robots.txt', 'config/_robots.t');\""
        ]
     }
