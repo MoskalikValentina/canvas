@@ -1,5 +1,5 @@
 .idea/*
-/_gulp-builder/.sass-cache/*
-/_gulp-builder/node_modules/*
-/_gulp-builder/bower_components/*
+/_gulp-builder/bower_components/
+/_gulp-builder/node_modules/
+/_gulp-builder/.sass-cache/
 /vendor/
