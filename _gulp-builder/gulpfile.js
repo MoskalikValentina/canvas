@@ -20,7 +20,7 @@ var path = {
         js: build_dir + '/js/',
         img: build_dir + '/img/',
         fonts: build_dir + '/fonts/',
-        sprite_scss: src_dir + '/scss/4_common',
+        sprite_scss: src_dir + '/sass/4_common',
         zip: build_dir + '/'
     },
     src: {
