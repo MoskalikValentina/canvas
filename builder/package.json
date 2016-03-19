@@ -24,6 +24,7 @@
     "gulp-ttf2woff": "^1.0.2"
   },
   "devDependencies": {
+    "gulp-debug": "^2.1.2",
     "gulp-favicons": "^1.0.9"
   }
 }

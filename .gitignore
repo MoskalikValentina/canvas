@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-node_modules
-dist
-.tmp
-.sass-cache
-bower_components
-test/bower_components
-=======
 .idea/*
-.project
 .sass-cache/*
-arch/*
 builder/.sass-cache/*
 builder/node_modules/*
 builder/bower_components/*
-project/*
->>>>>>> a063b470910cb8dd3ceb2d8dc8495a07e11cdd74

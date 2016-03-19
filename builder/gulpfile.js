@@ -1,10 +1,53 @@
-//TODO add style.css whithout minification
-//TODO solve problem with plugin loads. See 'gulp-minify-css'
-//TODO add diff files fo r js-libs and js-plugins
+'use strict';
 
-'use strict'
+/***********************************************************************************************************************
+ * Path and file naming settings
+ **********************************************************************************************************************/
 
-//Requires
+var build_base_dir = '..';
+var src_base_dir = '../src';
+
+var css_main_file_name = 'style.css';
+var sprite_img_file_name = 'sprite.png';
+var sprite_scss_file_name = '_sprite.scss';
+var js_file_name = "script.js";
+var zip_file_name = 'build.zip';
+
+var path = {
+    build: {
+        html: build_base_dir + '/',
+        css: build_base_dir + '/css/',
+        js: build_base_dir + '/js/',
+        img: build_base_dir + '/img/',
+        fonts: build_base_dir + '/fonts/',
+        sprite_img: build_base_dir + '/img/' + sprite_img_file_name,
+        sprite_scss: build_base_dir + '/css/4_common',
+        zip: build_base_dir + '/'
+    },
+    src: {
+        html: src_base_dir + '/*.html',
+        css: src_base_dir + '/css/' + css_main_file_name,
+        js: src_base_dir + '/js/*.js',
+        img: src_base_dir + '/img/**/*.*',
+        fonts: src_base_dir + '/fonts/*.ttf',
+        sprites: src_base_dir + '/img/sprites/*.*',
+        zip: [build_base_dir + '/**', '!' + build_base_dir + '/builder/node_modules/**', '!' + build_base_dir + '/builder/bower_components/**']
+    },
+    watch: {
+        html:  src_base_dir + '/*.html',
+        css: src_base_dir + '/css/**/*.scss',
+        js: src_base_dir + '/js/**/*.js',
+        img: src_base_dir + '/img/**/*.*',
+        fonts: src_base_dir + '/fonts/**/*.*',
+        sprite: src_base_dir + '/img/sprites/*.*'
+    },
+    clean: build_base_dir + '/'
+};
+
+/***********************************************************************************************************************
+ * Plugins
+ **********************************************************************************************************************/
+
 var gulp = require('gulp');
 var plugins = {
     'rename': require('gulp-rename'),
@@ -25,48 +68,17 @@ var plugins = {
     'zip': require('gulp-zip'),
     'spritesmith': require('gulp.spritesmith'),
     'ttf2woff': require('gulp-ttf2woff'),
-    'ttf2eot': require('gulp-ttf2eot')
-}
-
-var reload = plugins.browserSync.reload;
-
-//Path config
-var path = {
-    build: {
-        html: '../',
-        css: '../css/',
-        js: '../js/',
-        img: '../img/',
-        fonts: '../fonts/'
-    },
-    src: {
-        src: '../src/',
-        html: '../src/*.html',
-        css: '../src/css/style.scss',
-        js: {
-            def: '../src/js/*.js',
-            script: '../src/js/*.js',
-            libs: '../src/js/libs/*.js',
-            plugins: '../src/js/plugins/*js'
-        },
-        img: '../src/img/**/*.*',
-        fonts: '../src/fonts/**/*.*',
-        sprites: '../src/img/sprites/*.*'
-    },
-    watch: {
-        html: '../src/*.html',
-        css: '../src/css/**/*.scss',
-        js: '../src/js/**/*.js',
-        img: '../src/img/**/*.*',
-        fonts: '../src/fonts/**/*.*',
-        sprite: '../src/img/sprites/*.*'
-    },
-    clean: '../build/'
+    'ttf2eot': require('gulp-ttf2eot'),
+    'debug' : require('gulp-debug')
 };
+
+/***********************************************************************************************************************
+ * Server config
+ **********************************************************************************************************************/
 
 var serv_config = {
     server: {
-        baseDir: "../"
+        baseDir: build_base_dir + "/"
     },
     tunnel: true,
     host: 'localhost',
@@ -74,6 +86,19 @@ var serv_config = {
     logPrefix: "Frontend_Devil"
 };
 
+var reload = plugins.browserSync.reload;
+
+/***********************************************************************************************************************
+ * Tasks registration
+ **********************************************************************************************************************/
+
+/***********************************************************************************************************************
+ * Task: HTML
+ ***********************************************************************************************************************
+ *
+ * Concatenates and cleans .html files. Also adds versions to .js, .css and .html files
+ *
+ **********************************************************************************************************************/
 
 gulp.task('html:build', function() {
     gulp.src(path.src.html)
@@ -97,27 +122,43 @@ gulp.task('html:dev', function() {
         }));
 });
 
+/***********************************************************************************************************************
+ * Task: Sprite
+ ***********************************************************************************************************************
+ *
+ * Concatenates images in one sprite image and generate .scss file sprite mixins
+ *
+ **********************************************************************************************************************/
+
 gulp.task('sprite', function() {
     var spriteData = gulp.src(path.src.sprites).pipe(plugins.spritesmith({
-        imgName: '../img/sprite.png',
-        cssName: '_sprite.scss',
+        imgName: path.build.sprite_img,
+        cssName: sprite_scss_file_name,
         cssVarMap: function(sprite) {
             sprite.name = 's-' + sprite.name
         }
     }));
-    spriteData.css.pipe(gulp.dest('../src/css/4_common'));
+    spriteData.css.pipe(gulp.dest(path.build.sprite_scss));
     spriteData.img.pipe(gulp.dest(path.build.img));
 });
 
+/***********************************************************************************************************************
+ * Task: CSS
+ ***********************************************************************************************************************
+ *
+ * Compiles .scss files to css. Adds vendor prefixes and minimizes
+ *
+ **********************************************************************************************************************/
+
 gulp.task('css:build', function() {
     gulp.src(path.src.css)
-        .pipe(plugins.plumber())
+        .pipe(plugins.plumber());
     return plugins.sass(path.src.css)
         .pipe(plugins.prefixer())
-        .pipe(plugins.rename('style.dist.css'))
+        .pipe(plugins.rename('dist.' + css_main_file_name))
         .pipe(gulp.dest(path.build.css))
         .pipe(plugins.cssmin())
-        .pipe(plugins.rename('style.css'))
+        .pipe(plugins.rename(css_main_file_name))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true
@@ -126,7 +167,7 @@ gulp.task('css:build', function() {
 
 gulp.task('css:dev', function() {
     gulp.src(path.src.css)
-        .pipe(plugins.plumber())
+        .pipe(plugins.plumber());
     return plugins.sass(path.src.css, {
             sourcemap: true
         })
@@ -139,24 +180,32 @@ gulp.task('css:dev', function() {
         }));
 });
 
+/***********************************************************************************************************************
+ * Task: JS
+ ***********************************************************************************************************************
+ *
+ * Concatenates and minimizes js files
+ *
+ **********************************************************************************************************************/
+
 gulp.task('js:build', function() {
-    gulp.src(path.src.js.def)
+    gulp.src(path.src.js)
         .pipe(plugins.plumber())
         .pipe(plugins.rigger())
-        .pipe(plugins.rename('script.dist.js'))
+        .pipe(plugins.rename('dist.' + js_file_name))
         .pipe(gulp.dest(path.build.js))
         .pipe(plugins.uglify({
             mangle: false //Need for angular normal work. Off renaming
         }))
-        .pipe(plugins.rename('script.js'))
+        .pipe(plugins.rename(js_file_name))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
             stream: true
         }));
-})
+});
 
 gulp.task('js:dev', function() {
-    gulp.src(path.src.js.def)
+    gulp.src(path.src.js)
         .pipe(plugins.plumber())
         .pipe(plugins.rigger())
         .pipe(plugins.sourcemaps.init())
@@ -165,7 +214,15 @@ gulp.task('js:dev', function() {
         .pipe(reload({
             stream: true
         }));
-})
+});
+
+/***********************************************************************************************************************
+ * Task: Img
+ ***********************************************************************************************************************
+ *
+ * Compress .png and .jpg files
+ *
+ **********************************************************************************************************************/
 
 gulp.task('img:build', function() {
     gulp.src(path.src.img)
@@ -182,7 +239,7 @@ gulp.task('img:build', function() {
         .pipe(reload({
             stream: true
         }));
-})
+});
 
 gulp.task('img:dev', function() {
     gulp.src(path.src.img)
@@ -190,58 +247,109 @@ gulp.task('img:dev', function() {
         .pipe(reload({
             stream: true
         }));
-})
+});
 
-gulp.task('fonts:build', function() {
-    gulp.src("../src/fonts/*.ttf")
+/***********************************************************************************************************************
+ * Task: Fonts
+ ***********************************************************************************************************************
+ *
+ * Generate .eot and .woff files frome one .ttf file.
+ * Reacts on .ttf only
+ *
+ **********************************************************************************************************************/
+
+gulp.task('fonts', function() {
+    gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
         .pipe(plugins.ttf2eot())
         .pipe(gulp.dest(path.build.fonts));
-    gulp.src("../src/fonts/*.ttf")
+    gulp.src(path.src.fonts)
         .pipe(plugins.ttf2woff())
         .pipe(gulp.dest(path.build.fonts));
-})
-
-
-//Create zip file
-gulp.task('zip', function() {
-    return gulp.src([path.build.html + '*/**', '!' + path.build.html + '*/builder'], {
-            base: "../"
-        })
-        .pipe(plugins.zip('build.zip'))
-        .pipe(gulp.dest('../'));
 });
 
+/***********************************************************************************************************************
+ * Task: ZIP
+ ***********************************************************************************************************************
+ *
+ * Compress build path in .zip file.
+ * Use for deploying preparing
+ *
+ **********************************************************************************************************************/
 
-gulp.task('webserver', function() {
+gulp.task('zip', function() {
+    return gulp.src(path.src.zip)
+        .pipe(plugins.plumber())
+        .pipe(plugins.zip(zip_file_name))
+        .pipe(gulp.dest(path.build.zip));
+});
+
+/***********************************************************************************************************************
+ * Task: Webserver
+ ***********************************************************************************************************************
+ *
+ * Show pages with auto-reload
+ *
+ **********************************************************************************************************************/
+
+gulp.task('serv', function() {
     plugins.browserSync(serv_config);
 });
+
+/***********************************************************************************************************************
+ * Task: Clean
+ ***********************************************************************************************************************
+ *
+ * Cleans build directory
+ *
+ **********************************************************************************************************************/
 
 gulp.task('clean', function(cb) {
     plugins.rimraf(path.clean, cb);
 });
 
-//All build task
+/***********************************************************************************************************************
+ * Task: Build
+ ***********************************************************************************************************************
+ *
+ * Run all task in build mode. Prepare all for production
+ *
+ **********************************************************************************************************************/
+
 gulp.task('build', [
     'sprite',
     'html:build',
     'js:build',
     'css:build',
-    'fonts:build',
+    'fonts',
     'img:build'
 ]);
 
-//Develop build task
+/***********************************************************************************************************************
+ * Task: Build
+ ***********************************************************************************************************************
+ *
+ * Run all task in development mode. Quick use for developing process
+ *
+ **********************************************************************************************************************/
+
 gulp.task('dev', [
     'sprite',
     'html:dev',
     'js:dev',
     'css:dev',
-    'fonts:build',
+    'fonts',
     'img:dev'
 ]);
 
-//Watch task
+/***********************************************************************************************************************
+ * Task: Watch
+ ***********************************************************************************************************************
+ *
+ * Watch all files and start needed tasks when changes happen
+ *
+ **********************************************************************************************************************/
+
 gulp.task('watch', function() {
     plugins.watch([path.watch.html], function(event, cb) {
         gulp.start('html:dev');
@@ -259,9 +367,16 @@ gulp.task('watch', function() {
         gulp.start('img:dev');
     });
     plugins.watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:build');
+        gulp.start('fonts');
     });
 });
 
-//Default task
+/***********************************************************************************************************************
+ * Task: Watch
+ ***********************************************************************************************************************
+ *
+ * Run all tasks in dev mode and than run watch task
+ *
+ **********************************************************************************************************************/
+
 gulp.task('default', ['dev', 'watch']);
