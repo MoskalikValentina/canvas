@@ -1,0 +1,19 @@
+// import gridle
+@import "../../../builder/bower_components/gridle/sass/gridle/gridle";
+
+// setting up the grid
+@include gridle_setup( (
+	context : 12,
+	gutter-width : 20px
+) );
+
+// make the use of media queries really easy
+@include gridle_register_state ( mobile , (
+	max-width : 480px,
+	gutter-width : 10px
+) );
+
+// even with full custom queries :
+@include gridle_register_state ( landscape, (
+	query : "(orientation : landscape)"
+) );

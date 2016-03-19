@@ -4,9 +4,10 @@
  * Path and file naming settings
  **********************************************************************************************************************/
 
-var build_base_dir = '..';
-var src_base_dir = '../src';
+var build_dir = '../public';
+var src_dir = '../resources/assets';
 
+var scss_main_file_name = 'style.scss';
 var css_main_file_name = 'style.css';
 var sprite_img_file_name = 'sprite.png';
 var sprite_scss_file_name = '_sprite.scss';
@@ -15,33 +16,29 @@ var zip_file_name = 'build.zip';
 
 var path = {
     build: {
-        html: build_base_dir + '/',
-        css: build_base_dir + '/css/',
-        js: build_base_dir + '/js/',
-        img: build_base_dir + '/img/',
-        fonts: build_base_dir + '/fonts/',
-        sprite_img: build_base_dir + '/img/' + sprite_img_file_name,
-        sprite_scss: build_base_dir + '/css/4_common',
-        zip: build_base_dir + '/'
+        css: build_dir + '/css/',
+        js: build_dir + '/js/',
+        img: build_dir + '/img/',
+        fonts: build_dir + '/fonts/',
+        sprite_scss: build_dir + '/css/4_common',
+        zip: build_dir + '/'
     },
     src: {
-        html: src_base_dir + '/*.html',
-        css: src_base_dir + '/css/' + css_main_file_name,
-        js: src_base_dir + '/js/*.js',
-        img: src_base_dir + '/img/**/*.*',
-        fonts: src_base_dir + '/fonts/*.ttf',
-        sprites: src_base_dir + '/img/sprites/*.*',
-        zip: [build_base_dir + '/**', '!' + build_base_dir + '/builder/node_modules/**', '!' + build_base_dir + '/builder/bower_components/**']
+        css: src_dir + '/css/' + scss_main_file_name,
+        js: src_dir + '/js/*.js',
+        img: src_dir + '/img/**/*.*',
+        fonts: src_dir + '/fonts/*.ttf',
+        sprites: src_dir + '/img/sprites/*.*',
+        zip: [build_dir + '/**', '!' + build_dir + '/builder/node_modules/**', '!' + build_dir + '/builder/bower_components/**']
     },
     watch: {
-        html:  src_base_dir + '/*.html',
-        css: src_base_dir + '/css/**/*.scss',
-        js: src_base_dir + '/js/**/*.js',
-        img: src_base_dir + '/img/**/*.*',
-        fonts: src_base_dir + '/fonts/**/*.*',
-        sprite: src_base_dir + '/img/sprites/*.*'
+        css: src_dir + '/css/**/*.scss',
+        js: src_dir + '/js/**/*.js',
+        img: src_dir + '/img/**/*.*',
+        fonts: src_dir + '/fonts/**/*.*',
+        sprite: src_dir + '/img/sprites/*.*'
     },
-    clean: build_base_dir + '/'
+    clean: build_dir + '/'
 };
 
 /***********************************************************************************************************************
@@ -52,7 +49,6 @@ var gulp = require('gulp');
 var plugins = {
     'rename': require('gulp-rename'),
     'rigger': require('gulp-rigger'),
-    'htmlclean': require('gulp-htmlclean'),
     'sourcemaps': require('gulp-sourcemaps'),
     'sass': require('gulp-ruby-sass'),
     'prefixer': require('gulp-autoprefixer'),
@@ -60,7 +56,6 @@ var plugins = {
     'imagemin': require('gulp-imagemin'),
     'pngquant': require('imagemin-pngquant'),
     'uglify': require('gulp-uglify'),
-    'versionAppend': require('gulp-version-append'),
     'watch': require('gulp-watch'),
     'browserSync': require("browser-sync"),
     'rimraf': require('rimraf'),
@@ -79,7 +74,7 @@ var plugins = {
 
 var serv_config = {
     server: {
-        baseDir: build_base_dir + "/"
+        baseDir: build_dir + "/"
     },
     tunnel: true,
     host: 'localhost',
@@ -94,37 +89,6 @@ var reload = plugins.browserSync.reload;
  **********************************************************************************************************************/
 
 /***********************************************************************************************************************
- * Task: HTML
- ***********************************************************************************************************************
- *
- * Concatenates and cleans .html files. Also adds versions to .js, .css and .html files
- *
- **********************************************************************************************************************/
-
-gulp.task('html:build', function() {
-    gulp.src(path.src.html)
-        .pipe(plugins.plumber())
-        .pipe(plugins.rigger())
-        .pipe(plugins.versionAppend(['html', 'js', 'css']))
-        .pipe(plugins.htmlclean())
-        .pipe(plugins.plumber.stop())
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({
-            stream: true
-        }));
-});
-
-gulp.task('html:dev', function() {
-    gulp.src(path.src.html)
-        .pipe(plugins.plumber())
-        .pipe(plugins.rigger())
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({
-            stream: true
-        }));
-});
-
-/***********************************************************************************************************************
  * Task: Sprite
  ***********************************************************************************************************************
  *
@@ -134,7 +98,7 @@ gulp.task('html:dev', function() {
 
 gulp.task('sprite', function() {
     var spriteData = gulp.src(path.src.sprites).pipe(plugins.spritesmith({
-        imgName: path.build.sprite_img,
+        imgName: sprite_img_file_name,
         cssName: sprite_scss_file_name,
         cssVarMap: function(sprite) {
             sprite.name = 's-' + sprite.name
@@ -244,7 +208,7 @@ gulp.task('img:build', function() {
 });
 
 gulp.task('img:dev', function() {
-    gulp.src(path.src.img)
+    gulp.src([path.src.img, '!' + path.src.sprites])
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({
             stream: true
@@ -320,7 +284,6 @@ gulp.task('clean', function(cb) {
 
 gulp.task('build', [
     'sprite',
-    'html:build',
     'js:build',
     'css:build',
     'fonts',
@@ -337,7 +300,6 @@ gulp.task('build', [
 
 gulp.task('dev', [
     'sprite',
-    'html:dev',
     'js:dev',
     'css:dev',
     'fonts',
@@ -353,9 +315,6 @@ gulp.task('dev', [
  **********************************************************************************************************************/
 
 gulp.task('watch', function() {
-    plugins.watch([path.watch.html], function(event, cb) {
-        gulp.start('html:dev');
-    });
     plugins.watch([path.watch.css], function(event, cb) {
         gulp.start('css:dev');
     });
