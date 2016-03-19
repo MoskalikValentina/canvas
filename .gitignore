@@ -1,5 +1,4 @@
 .idea/*
-.sass-cache/*
-builder/.sass-cache/*
-builder/node_modules/*
-builder/bower_components/*
+_gulp-builder/.sass-cache/*
+_gulp-builder/node_modules/*
+_gulp-builder/bower_components/*
