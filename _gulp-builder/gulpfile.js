@@ -9,7 +9,7 @@ var src_dir = '../resources/assets';
 
 var scss_main_file_name = 'style.scss';
 var css_main_file_name = 'style.css';
-var sprite_img_file_name = 'sprite.png';
+var sprite_img_file_name = '../img/sprites/sprite.png';
 var sprite_scss_file_name = '_sprite.scss';
 var js_file_name = "script.js";
 var zip_file_name = 'build.zip';
@@ -290,7 +290,7 @@ gulp.task('build', [
 ]);
 
 /***********************************************************************************************************************
- * Task: Dev
+ * Task: Build
  ***********************************************************************************************************************
  *
  * Run all task in development mode. Quick use for developing process
@@ -332,7 +332,7 @@ gulp.task('watch', function() {
 });
 
 /***********************************************************************************************************************
- * Task: Default
+ * Task: Watch
  ***********************************************************************************************************************
  *
  * Run all tasks in dev mode and than run watch task
