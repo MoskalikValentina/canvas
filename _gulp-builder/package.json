@@ -23,6 +23,9 @@
   },
   "devDependencies": {
     "gulp-debug": "^2.1.2",
-    "gulp-favicons": "^1.0.9"
+    "gulp-favicons": "^1.0.9",
+    "gulp-jshint": "^2.0.1",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0"
   }
 }

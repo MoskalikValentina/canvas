@@ -91,12 +91,10 @@ table {
   cursor: progress; }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-  cursor: -webkit-zoom-out;
   cursor: zoom-out; }
 
 .mfp-zoom {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
   cursor: zoom-in; }
 
 .mfp-auto-cursor .mfp-content {
@@ -468,124 +466,10 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
-.s-big-rubl {
-  background-image: url(../img/sprite.png);
-  background-position: -121px 0px;
-  width: 20px;
-  height: 25px; }
-
-.s-btn {
-  background-image: url(../img/sprite.png);
-  background-position: -121px -94px;
-  width: 16px;
-  height: 14px; }
-
-.s-cart-rubl {
-  background-image: url(../img/sprite.png);
-  background-position: -141px -39px;
-  width: 13px;
-  height: 16px; }
-
-.s-close-form {
-  background-image: url(../img/sprite.png);
-  background-position: -141px -67px;
-  width: 9px;
-  height: 9px; }
-
-.s-close {
-  background-image: url(../img/sprite.png);
-  background-position: 0px -109px;
-  width: 18px;
-  height: 18px; }
-
-.s-contacts-geol {
-  background-image: url(../img/sprite.png);
+.s-i {
+  background-image: url(../img/sprites/sprite.png);
   background-position: 0px 0px;
-  width: 61px;
-  height: 80px; }
-
-.s-contacts-phone {
-  background-image: url(../img/sprite.png);
-  background-position: -61px 0px;
-  width: 60px;
-  height: 80px; }
-
-.s-delete {
-  background-image: url(../img/sprite.png);
-  background-position: -25px -80px;
-  width: 26px;
-  height: 26px; }
-
-.s-drop {
-  background-image: url(../img/sprite.png);
-  background-position: -141px -55px;
-  width: 11px;
-  height: 12px; }
-
-.s-geol {
-  background-image: url(../img/sprite.png);
-  background-position: -121px -72px;
-  width: 16px;
-  height: 22px; }
-
-.s-i-phone {
-  background-image: url(../img/sprite.png);
-  background-position: -76px -80px;
-  width: 23px;
-  height: 23px; }
-
-.s-icon-main-phone {
-  background-image: url(../img/sprite.png);
-  background-position: -141px -20px;
-  width: 13px;
-  height: 19px; }
-
-.s-icon-time {
-  background-image: url(../img/sprite.png);
-  background-position: -99px -80px;
-  width: 18px;
-  height: 19px; }
-
-.s-main-icon-point {
-  background-image: url(../img/sprite.png);
-  background-position: -141px 0px;
-  width: 13px;
-  height: 20px; }
-
-.s-minus {
-  background-image: url(../img/sprite.png);
-  background-position: -141px -76px;
-  width: 5px;
-  height: 4px; }
-
-.s-plus {
-  background-image: url(../img/sprite.png);
-  background-position: -146px -76px;
-  width: 5px;
-  height: 4px; }
-
-.s-rubl-big {
-  background-image: url(../img/sprite.png);
-  background-position: 0px -80px;
-  width: 25px;
-  height: 29px; }
-
-.s-rubl {
-  background-image: url(../img/sprite.png);
-  background-position: -121px -51px;
-  width: 18px;
-  height: 21px; }
-
-.s-s-cart {
-  background-image: url(../img/sprite.png);
-  background-position: -51px -80px;
-  width: 25px;
-  height: 24px; }
-
-.s-s-phone {
-  background-image: url(../img/sprite.png);
-  background-position: -121px -25px;
-  width: 16px;
-  height: 26px; }
+  width: 1px;
+  height: 1px; }
 
 /*END Pages*/

@@ -29,7 +29,8 @@ var path = {
         img: src_dir + '/img/**/*.*',
         fonts: src_dir + '/fonts/*.ttf',
         sprites: src_dir + '/img/sprites/*.*',
-        zip: [build_dir + '/**', '!' + build_dir + '/_gulp-builder/node_modules/**', '!' + build_dir + '/_gulp-builder/bower_components/**']
+        zip: [build_dir + '/**', '!' + build_dir + '/_gulp-builder/node_modules/**', '!' + build_dir + '/_gulp-builder/bower_components/**'],
+        lint: src_dir + '/js/script/*.js'
     },
     watch: {
         css: src_dir + '/sass/**/*.*',
@@ -64,7 +65,9 @@ var plugins = {
     'spritesmith': require('gulp.spritesmith'),
     'ttf2woff': require('gulp-ttf2woff'),
     'ttf2eot': require('gulp-ttf2eot'),
-    'debug' : require('gulp-debug')
+    'debug' : require('gulp-debug'),
+    'jshint' : require('gulp-jshint'),
+    'stylish' : require('jshint-stylish')
 };
 
 /***********************************************************************************************************************
@@ -234,6 +237,24 @@ gulp.task('fonts', function() {
 });
 
 /***********************************************************************************************************************
+ * Task: Jshint
+ ***********************************************************************************************************************
+ *
+ * Сhecks js code for correctness 
+ * 
+ *
+ **********************************************************************************************************************/
+
+
+gulp.task('lint', function() {
+  return gulp.src(path.src.lint)
+    .pipe(plugins.jshint())
+    .pipe(plugins.jshint.reporter(plugins.stylish));
+});
+
+
+
+/***********************************************************************************************************************
  * Task: ZIP
  ***********************************************************************************************************************
  *
@@ -286,7 +307,7 @@ gulp.task('build', [
     'js:build',
     'css:build',
     'fonts',
-    'img:build'
+    'img:build',
 ]);
 
 /***********************************************************************************************************************
@@ -302,7 +323,8 @@ gulp.task('dev', [
     'js:dev',
     'css:dev',
     'fonts',
-    'img:dev'
+    'img:dev',
+    'lint'
 ]);
 
 /***********************************************************************************************************************
