@@ -3,3 +3,8 @@
 
 //FormSender styles import
 @import 'sendform';
+
+//Bootstarp grid
+@import '../../../../_gulp-builder/bower_components/bootstrap/scss/_variables.scss';
+@import '../../../../_gulp-builder/bower_components/bootstrap/scss/_mixins.scss';
+@import '../../../../_gulp-builder/bower_components/bootstrap/scss/_grid.scss';
