@@ -1,5 +1,6 @@
 .default-cnt-audi{
 	font-family: $ext-font;
+	font-size: 14px;
 	div{
 		margin-bottom: 20px;
 	}
@@ -60,13 +61,11 @@
 	b{
 		font-weight: bold;
 	} 
-	i{
-		font-style: italic;
-	}
 	a{
 		color: inherit;
+		text-decoration: underline;  
 		&:hover{
-			text-decoration: underline;     
+			text-decoration: none;
 		}
 		&:focus{
 			outline: none;

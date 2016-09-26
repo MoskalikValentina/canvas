@@ -1,3 +1,9 @@
+/* @include add-font('../fonts/AudiType-Normal', 'Audi');
+@include add-font('../fonts/AudiType-Bold', 'Audi', normal, bold);
+@include add-font('../fonts/AudiType-ExtendedNormal', 'AudiExtended');
+@include add-font('../fonts/AudiType-ExtendedBold', 'AudiExtended', normal, bold); */
+/* $base-font: 'Audi', Verdana, Geneva, sans-serif;
+$ext-font: 'AudiExtended', Verdana, Geneva, sans-serif; */
 /**
  * Meyer reset
  */
@@ -436,6 +442,30 @@ img.mfp-img {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px; }
+  @media (min-width: 544px) {
+    .container {
+      max-width: 576px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 940px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px; }
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -472,4 +502,117 @@ The `sprites` mixin generates identical output to the CSS template
   width: 1px;
   height: 1px; }
 
+/* HEADER */
+/* END HEADER */
+/* CONTENT FROM ADMIN */
+.default-cnt ul {
+  margin-left: 10px;
+  list-style-type: disc;
+  list-style-position: inside; }
+.default-cnt li {
+  font-size: 14px;
+  letter-spacing: .02em; }
+.default-cnt ol {
+  margin-left: 10px;
+  list-style-type: decimal; }
+.default-cnt h1, .default-cnt h2 {
+  /*  font-family: $bold; */
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 25px; }
+.default-cnt h3, .default-cnt h4, .default-cnt h5 {
+  font-size: 20px;
+  line-height: 21px; }
+.default-cnt p {
+  font-size: 14px;
+  letter-spacing: 0;
+  margin-bottom: 15px; }
+.default-cnt table {
+  margin: 10px 0;
+  max-width: 100%;
+  width: auto !important; }
+.default-cnt td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px 5px;
+  vertical-align: middle; }
+.default-cnt img {
+  max-width: 100%; }
+.default-cnt strong,
+.default-cnt b {
+  /* font-family: $bold; */ }
+.default-cnt i {
+  font-style: italic; }
+.default-cnt a {
+  color: inherit; }
+  .default-cnt a:hover {
+    text-decoration: underline; }
+  .default-cnt a:focus {
+    outline: none; }
+
+/* END CONTENT FROM ADMIN */
+/* FOOTER */
+/* END FOOTER */
+* {
+  box-sizing: border-box; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  -webkit-transition: color 0.3s;
+          transition: color 0.3s; }
+
+.clr:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  /* font-family: $base-font;
+  font-size: 14px;
+  color:$color-font-txt; */ }
+
+.container {
+  max-width: 1380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* align center, add default padding*/
+  padding-left: 40px;
+  padding-right: 40px; }
+
+/* footer to bottom of page */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%; }
+
+.cnt-wrap {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
+/* end footer to bottom of page */
 /*END Pages*/
