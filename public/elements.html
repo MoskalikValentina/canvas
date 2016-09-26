@@ -15,9 +15,26 @@
 		<h1> Базовые элементы для bmw premium</h1>
 		<br>
 		<br> 	
-		<a href="#" class="btn">Button</a>
+		<h2>Кнопки</h2>
 		<br>
-		<br> 	
+		<a href='#' class="btn">button</a>
+		<br>
+		<br>
+		<a href='#' class="btn with-ic-inline">button</a>
+		<br>
+		<br>
+		<a href="#" class="btn-dec">button</a>
+		<br>
+		<br>
+		<a href="#" class="btn-dec"><span class="btn-ic"></span>button</a>
+		<br>
+		<br>
+		<a href="#" class="btn-inverse">button</a>
+		<br>
+		<br>
+		<br>
+		<h2>Формы</h2>
+		<br>	
 		
 		<div class="wrap-inp">
 			<label for="name">Имя</label>
@@ -26,17 +43,24 @@
 		<br>
 		<br> 
 		<div class="wrap-inp">
-			<input type="tel" id="phone" class="error">
-			<label for="phone" class="error-lbl">Неправильный номер</label>
+			<input type="email" id="email" class="error">
+			<label for="email" class="error-lbl">Неправильный email</label>
 		</div>
 		<br>
 		<br> 
-		<select class="sel" style="width:100%;">
-		  <option value="Как можно скорее">Как можно скорее</option>
-		  <option value="Number #1">Number #1</option>
-		  <option value="Number #2">Number #2</option>
-		  <option value="Number #3">Number #3</option>
-		</select>
+		<h2>Input с иконкой</h2>
+		<br>
+		<br> 
+		<div class="wrap-inp inp-with-ic">
+            <input type="text" name="name" id="name-with-ic" placeholder="Ваше имя">
+            <label for="name-with-ic" class="inp-with-ic-lbl">
+                <i class="inp-ic inp-name"></i>
+            </label>
+        </div>
+        <div class="wrap_checkbox">
+            <input type="checkbox" name="credit_info" id="credit_info" checked="checked">
+            <label for="credit_info"><i class="checked-ic"></i>Узнать о покупке в кредит</label>
+        </div>
 	</div>
 
 <script src="js/script.js"></script>
