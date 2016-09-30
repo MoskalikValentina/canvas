@@ -1,0 +1,2 @@
+//Site script
+"use strict";
