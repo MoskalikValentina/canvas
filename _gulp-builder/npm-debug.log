@@ -1,0 +1,821 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'karma-chrome-launcher',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.0
+4 verbose install initial load of E:\OpenServer\domains\developments\_gulp-builder\package.json
+5 warn package.json PackgeName@1.0.0 No description
+6 warn package.json PackgeName@1.0.0 No repository field.
+7 warn package.json PackgeName@1.0.0 No README data
+8 warn package.json PackgeName@1.0.0 No license field.
+9 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\babel-polyfill\package.json
+10 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\babel-preset-es2015\package.json
+11 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\browser-sync\package.json
+12 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp\package.json
+13 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-autoprefixer\package.json
+14 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-babel\package.json
+15 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-debug\package.json
+16 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-favicons\package.json
+17 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-imagemin\package.json
+18 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-jshint\package.json
+19 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-karma\package.json
+20 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-minify-css\package.json
+21 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-plumber\package.json
+22 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-rename\package.json
+23 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-rigger\package.json
+24 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-ruby-sass\package.json
+25 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-sourcemaps\package.json
+26 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-ttf2eot\package.json
+27 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-ttf2woff\package.json
+28 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-typescript\package.json
+29 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-uglify\package.json
+30 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-watch\package.json
+31 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp-zip\package.json
+32 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\gulp.spritesmith\package.json
+33 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\imagemin-pngquant\package.json
+34 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\jasmine\package.json
+35 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\jasmine-core\package.json
+36 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\jshint\package.json
+37 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\jshint-stylish\package.json
+38 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma\package.json
+39 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\package.json
+40 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-jasmine\package.json
+41 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-jquery\package.json
+42 verbose installManyTop reading scoped package data from E:\OpenServer\domains\developments\_gulp-builder\node_modules\rimraf\package.json
+43 info package.json gulp-minify-css@1.2.4 No repository field.
+44 info package.json gulp-rename@1.2.2 No license field.
+45 info package.json gulp-ttf2woff@1.1.0 No license field.
+46 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\package.json
+47 verbose install karma-chrome-launcher is installed as 2.0.0
+48 silly cache add args [ 'karma-chrome-launcher', null ]
+49 verbose cache add spec karma-chrome-launcher
+50 silly cache add parsed spec Result {
+50 silly cache add   raw: 'karma-chrome-launcher',
+50 silly cache add   scope: null,
+50 silly cache add   name: 'karma-chrome-launcher',
+50 silly cache add   rawSpec: '',
+50 silly cache add   spec: 'latest',
+50 silly cache add   type: 'tag' }
+51 silly addNamed karma-chrome-launcher@latest
+52 verbose addNamed "latest" is being treated as a dist-tag for karma-chrome-launcher
+53 info addNameTag [ 'karma-chrome-launcher', 'latest' ]
+54 silly mapToRegistry name karma-chrome-launcher
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry uri https://registry.npmjs.org/karma-chrome-launcher
+58 verbose addNameTag registry:https://registry.npmjs.org/karma-chrome-launcher not in flight; fetching
+59 verbose request uri https://registry.npmjs.org/karma-chrome-launcher
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 12:45:51
+62 verbose request id 838a72cf982c22fe
+63 verbose etag "4F85C0FZBMRDOTDFPHJMQZBM8"
+64 http request GET https://registry.npmjs.org/karma-chrome-launcher
+65 http 304 https://registry.npmjs.org/karma-chrome-launcher
+66 verbose headers { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+66 verbose headers   via: '1.1 varnish',
+66 verbose headers   'cache-control': 'max-age=300',
+66 verbose headers   etag: '"4F85C0FZBMRDOTDFPHJMQZBM8"',
+66 verbose headers   age: '118',
+66 verbose headers   connection: 'keep-alive',
+66 verbose headers   'x-served-by': 'cache-lcy1131-LCY',
+66 verbose headers   'x-cache': 'HIT',
+66 verbose headers   'x-cache-hits': '2',
+66 verbose headers   'x-timer': 'S1475228756.015057,VS0,VE0',
+66 verbose headers   vary: 'Accept-Encoding' }
+67 silly get cb [ 304,
+67 silly get   { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+67 silly get     via: '1.1 varnish',
+67 silly get     'cache-control': 'max-age=300',
+67 silly get     etag: '"4F85C0FZBMRDOTDFPHJMQZBM8"',
+67 silly get     age: '118',
+67 silly get     connection: 'keep-alive',
+67 silly get     'x-served-by': 'cache-lcy1131-LCY',
+67 silly get     'x-cache': 'HIT',
+67 silly get     'x-cache-hits': '2',
+67 silly get     'x-timer': 'S1475228756.015057,VS0,VE0',
+67 silly get     vary: 'Accept-Encoding' } ]
+68 verbose etag https://registry.npmjs.org/karma-chrome-launcher from cache
+69 verbose get saving karma-chrome-launcher to C:\Users\Bogdan\AppData\Roaming\npm-cache\registry.npmjs.org\karma-chrome-launcher\.cache.json
+70 silly addNameTag next cb for karma-chrome-launcher with tag latest
+71 silly addNamed karma-chrome-launcher@2.0.0
+72 verbose addNamed "2.0.0" is a plain semver version for karma-chrome-launcher
+73 silly cache afterAdd karma-chrome-launcher@2.0.0
+74 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\karma-chrome-launcher\2.0.0\package\package.json not in flight; writing
+75 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\karma-chrome-launcher\2.0.0\package\package.json written
+76 silly install resolved [ { name: 'karma-chrome-launcher',
+76 silly install resolved     version: '2.0.0',
+76 silly install resolved     description: 'A Karma plugin. Launcher for Chrome and Chrome Canary.',
+76 silly install resolved     main: 'index.js',
+76 silly install resolved     scripts: { test: 'grunt test' },
+76 silly install resolved     repository:
+76 silly install resolved      { type: 'git',
+76 silly install resolved        url: 'git://github.com/karma-runner/karma-chrome-launcher.git' },
+76 silly install resolved     keywords: [ 'karma-plugin', 'karma-launcher', 'chrome' ],
+76 silly install resolved     author: { name: 'Vojta Jina', email: 'vojta.jina@gmail.com' },
+76 silly install resolved     dependencies: { 'fs-access': '^1.0.0', which: '^1.2.1' },
+76 silly install resolved     license: 'MIT',
+76 silly install resolved     devDependencies:
+76 silly install resolved      { chai: '^3.3.0',
+76 silly install resolved        eslint: '^1.6.0',
+76 silly install resolved        'eslint-config-standard': '^4.4.0',
+76 silly install resolved        'eslint-plugin-standard': '^1.3.1',
+76 silly install resolved        grunt: '^0.4.1',
+76 silly install resolved        'grunt-auto-release': '^0.0.6',
+76 silly install resolved        'grunt-bump': '^0.6.0',
+76 silly install resolved        'grunt-conventional-changelog': '^5.0.0',
+76 silly install resolved        'grunt-conventional-github-releaser': '^0.5.0',
+76 silly install resolved        'grunt-eslint': '^17.2.0',
+76 silly install resolved        'grunt-karma': '1.x || ^0.12.1',
+76 silly install resolved        'grunt-npm': '^0.0.2',
+76 silly install resolved        'grunt-simple-mocha': '^0.4.0',
+76 silly install resolved        'jasmine-node': '^1.14.5',
+76 silly install resolved        karma: '1.x || ^0.13.10',
+76 silly install resolved        'karma-mocha': '1.x || ^0.2.0',
+76 silly install resolved        'load-grunt-tasks': '^3.2.0',
+76 silly install resolved        mocha: '^2.3.3',
+76 silly install resolved        sinon: '^1.17.1' },
+76 silly install resolved     contributors:
+76 silly install resolved      [ [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object],
+76 silly install resolved        [Object] ],
+76 silly install resolved     gitHead: '4110f87beb51ec45e23b4fc186957c2789a93b9a',
+76 silly install resolved     bugs: { url: 'https://github.com/karma-runner/karma-chrome-launcher/issues' },
+76 silly install resolved     homepage: 'https://github.com/karma-runner/karma-chrome-launcher#readme',
+76 silly install resolved     _id: 'karma-chrome-launcher@2.0.0',
+76 silly install resolved     _shasum: 'c2790c5a32b15577d0fff5a4d5a2703b3b439c25',
+76 silly install resolved     _from: 'karma-chrome-launcher@latest',
+76 silly install resolved     _npmVersion: '3.10.3',
+76 silly install resolved     _nodeVersion: '6.3.0',
+76 silly install resolved     _npmUser: { name: 'dignifiedquire', email: 'dignifiedquire@gmail.com' },
+76 silly install resolved     dist:
+76 silly install resolved      { shasum: 'c2790c5a32b15577d0fff5a4d5a2703b3b439c25',
+76 silly install resolved        tarball: 'https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-2.0.0.tgz' },
+76 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+76 silly install resolved     _npmOperationalInternal:
+76 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+76 silly install resolved        tmp: 'tmp/karma-chrome-launcher-2.0.0.tgz_1471537093162_0.5068207308650017' },
+76 silly install resolved     directories: {},
+76 silly install resolved     _resolved: 'https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-2.0.0.tgz',
+76 silly install resolved     readme: 'ERROR: No README data found!' } ]
+77 info install karma-chrome-launcher@2.0.0 into E:\OpenServer\domains\developments\_gulp-builder
+78 info installOne karma-chrome-launcher@2.0.0
+79 verbose installOne of karma-chrome-launcher to E:\OpenServer\domains\developments\_gulp-builder not in flight; installing
+80 verbose lock using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\karma-chrome-launcher-0c0a5fff8030e572.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+81 silly install write writing karma-chrome-launcher 2.0.0 to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+82 verbose unbuild node_modules\karma-chrome-launcher
+83 info preuninstall karma-chrome-launcher@2.0.0
+84 info uninstall karma-chrome-launcher@2.0.0
+85 verbose unbuild rmStuff karma-chrome-launcher@2.0.0 from E:\OpenServer\domains\developments\_gulp-builder\node_modules
+86 info postuninstall karma-chrome-launcher@2.0.0
+87 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher is being purged from base E:\OpenServer\domains\developments\_gulp-builder
+88 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+89 silly vacuum-fs purging E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+90 silly vacuum-fs quitting because other entries in E:\OpenServer\domains\developments\_gulp-builder\node_modules
+91 verbose tar unpack C:\Users\Bogdan\AppData\Roaming\npm-cache\karma-chrome-launcher\2.0.0\package.tgz
+92 verbose tar unpacking to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+93 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher is being purged
+94 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+95 silly gunzTarPerm modes [ '777', '666' ]
+96 silly gunzTarPerm extractEntry package.json
+97 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+98 silly gunzTarPerm extractEntry README.md
+99 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+100 silly gunzTarPerm extractEntry LICENSE
+101 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+102 silly gunzTarPerm extractEntry gruntfile.js
+103 silly gunzTarPerm modified mode [ 'gruntfile.js', 420, 438 ]
+104 silly gunzTarPerm extractEntry index.js
+105 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+106 silly gunzTarPerm extractEntry examples/simple/index.spec.js
+107 silly gunzTarPerm modified mode [ 'examples/simple/index.spec.js', 420, 438 ]
+108 silly gunzTarPerm extractEntry examples/simple/karma.conf.js
+109 silly gunzTarPerm modified mode [ 'examples/simple/karma.conf.js', 420, 438 ]
+110 silly gunzTarPerm extractEntry CHANGELOG.md
+111 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+112 silly gunzTarPerm extractEntry test/jsflags.spec.js
+113 silly gunzTarPerm modified mode [ 'test/jsflags.spec.js', 420, 438 ]
+114 verbose write writing to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\package.json
+115 info preinstall karma-chrome-launcher@2.0.0
+116 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\package.json
+117 silly prepareForInstallMany adding fs-access@^1.0.0 from karma-chrome-launcher dependencies
+118 silly prepareForInstallMany adding which@^1.2.1 from karma-chrome-launcher dependencies
+119 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\package.json
+120 silly cache add args [ 'fs-access@^1.0.0', null ]
+121 verbose cache add spec fs-access@^1.0.0
+122 silly cache add args [ 'which@^1.2.1', null ]
+123 verbose cache add spec which@^1.2.1
+124 silly cache add parsed spec Result {
+124 silly cache add   raw: 'fs-access@^1.0.0',
+124 silly cache add   scope: null,
+124 silly cache add   name: 'fs-access',
+124 silly cache add   rawSpec: '^1.0.0',
+124 silly cache add   spec: '>=1.0.0 <2.0.0',
+124 silly cache add   type: 'range' }
+125 silly addNamed fs-access@>=1.0.0 <2.0.0
+126 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for fs-access
+127 silly addNameRange { name: 'fs-access', range: '>=1.0.0 <2.0.0', hasData: false }
+128 silly mapToRegistry name fs-access
+129 silly mapToRegistry using default registry
+130 silly mapToRegistry registry https://registry.npmjs.org/
+131 silly mapToRegistry uri https://registry.npmjs.org/fs-access
+132 verbose addNameRange registry:https://registry.npmjs.org/fs-access not in flight; fetching
+133 silly cache add parsed spec Result {
+133 silly cache add   raw: 'which@^1.2.1',
+133 silly cache add   scope: null,
+133 silly cache add   name: 'which',
+133 silly cache add   rawSpec: '^1.2.1',
+133 silly cache add   spec: '>=1.2.1 <2.0.0',
+133 silly cache add   type: 'range' }
+134 silly addNamed which@>=1.2.1 <2.0.0
+135 verbose addNamed ">=1.2.1 <2.0.0" is a valid semver range for which
+136 silly addNameRange { name: 'which', range: '>=1.2.1 <2.0.0', hasData: false }
+137 silly mapToRegistry name which
+138 silly mapToRegistry using default registry
+139 silly mapToRegistry registry https://registry.npmjs.org/
+140 silly mapToRegistry uri https://registry.npmjs.org/which
+141 verbose addNameRange registry:https://registry.npmjs.org/which not in flight; fetching
+142 verbose request uri https://registry.npmjs.org/which
+143 verbose request no auth needed
+144 info attempt registry request try #1 at 12:45:52
+145 verbose etag "2KFIPWGAL54RH75Q4VKLWD6E0"
+146 http request GET https://registry.npmjs.org/which
+147 verbose request uri https://registry.npmjs.org/fs-access
+148 verbose request no auth needed
+149 info attempt registry request try #1 at 12:45:52
+150 verbose etag "4OJLDTROJV4RVPD4GKAZOBK7D"
+151 http request GET https://registry.npmjs.org/fs-access
+152 http 304 https://registry.npmjs.org/which
+153 verbose headers { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+153 verbose headers   via: '1.1 varnish',
+153 verbose headers   'cache-control': 'max-age=300',
+153 verbose headers   etag: '"2KFIPWGAL54RH75Q4VKLWD6E0"',
+153 verbose headers   age: '185',
+153 verbose headers   connection: 'keep-alive',
+153 verbose headers   'x-served-by': 'cache-lcy1120-LCY',
+153 verbose headers   'x-cache': 'HIT',
+153 verbose headers   'x-cache-hits': '10',
+153 verbose headers   'x-timer': 'S1475228756.341128,VS0,VE0',
+153 verbose headers   vary: 'Accept-Encoding' }
+154 silly get cb [ 304,
+154 silly get   { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+154 silly get     via: '1.1 varnish',
+154 silly get     'cache-control': 'max-age=300',
+154 silly get     etag: '"2KFIPWGAL54RH75Q4VKLWD6E0"',
+154 silly get     age: '185',
+154 silly get     connection: 'keep-alive',
+154 silly get     'x-served-by': 'cache-lcy1120-LCY',
+154 silly get     'x-cache': 'HIT',
+154 silly get     'x-cache-hits': '10',
+154 silly get     'x-timer': 'S1475228756.341128,VS0,VE0',
+154 silly get     vary: 'Accept-Encoding' } ]
+155 verbose etag https://registry.npmjs.org/which from cache
+156 verbose get saving which to C:\Users\Bogdan\AppData\Roaming\npm-cache\registry.npmjs.org\which\.cache.json
+157 http 304 https://registry.npmjs.org/fs-access
+158 verbose headers { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+158 verbose headers   via: '1.1 varnish',
+158 verbose headers   'cache-control': 'max-age=300',
+158 verbose headers   etag: '"4OJLDTROJV4RVPD4GKAZOBK7D"',
+158 verbose headers   age: '154',
+158 verbose headers   connection: 'keep-alive',
+158 verbose headers   'x-served-by': 'cache-lcy1129-LCY',
+158 verbose headers   'x-cache': 'HIT',
+158 verbose headers   'x-cache-hits': '1',
+158 verbose headers   'x-timer': 'S1475228756.353156,VS0,VE0',
+158 verbose headers   vary: 'Accept-Encoding' }
+159 silly get cb [ 304,
+159 silly get   { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+159 silly get     via: '1.1 varnish',
+159 silly get     'cache-control': 'max-age=300',
+159 silly get     etag: '"4OJLDTROJV4RVPD4GKAZOBK7D"',
+159 silly get     age: '154',
+159 silly get     connection: 'keep-alive',
+159 silly get     'x-served-by': 'cache-lcy1129-LCY',
+159 silly get     'x-cache': 'HIT',
+159 silly get     'x-cache-hits': '1',
+159 silly get     'x-timer': 'S1475228756.353156,VS0,VE0',
+159 silly get     vary: 'Accept-Encoding' } ]
+160 verbose etag https://registry.npmjs.org/fs-access from cache
+161 verbose get saving fs-access to C:\Users\Bogdan\AppData\Roaming\npm-cache\registry.npmjs.org\fs-access\.cache.json
+162 silly addNameRange number 2 { name: 'which', range: '>=1.2.1 <2.0.0', hasData: true }
+163 silly addNameRange versions [ 'which',
+163 silly addNameRange   [ '1.0.0',
+163 silly addNameRange     '1.0.1',
+163 silly addNameRange     '1.0.2',
+163 silly addNameRange     '1.0.3',
+163 silly addNameRange     '1.0.5',
+163 silly addNameRange     '1.0.6',
+163 silly addNameRange     '1.0.7',
+163 silly addNameRange     '1.0.8',
+163 silly addNameRange     '1.0.9',
+163 silly addNameRange     '1.1.0',
+163 silly addNameRange     '1.1.1',
+163 silly addNameRange     '1.1.2',
+163 silly addNameRange     '1.2.0',
+163 silly addNameRange     '1.2.1',
+163 silly addNameRange     '1.2.4',
+163 silly addNameRange     '1.2.5',
+163 silly addNameRange     '1.2.6',
+163 silly addNameRange     '1.2.7',
+163 silly addNameRange     '1.2.8',
+163 silly addNameRange     '1.2.9',
+163 silly addNameRange     '1.2.10',
+163 silly addNameRange     '1.2.11' ] ]
+164 silly addNamed which@1.2.11
+165 verbose addNamed "1.2.11" is a plain semver version for which
+166 silly cache afterAdd which@1.2.11
+167 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\which\1.2.11\package\package.json not in flight; writing
+168 silly addNameRange number 2 { name: 'fs-access', range: '>=1.0.0 <2.0.0', hasData: true }
+169 silly addNameRange versions [ 'fs-access', [ '1.0.0', '1.0.1' ] ]
+170 silly addNamed fs-access@1.0.1
+171 verbose addNamed "1.0.1" is a plain semver version for fs-access
+172 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\which\1.2.11\package\package.json written
+173 silly cache afterAdd fs-access@1.0.1
+174 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\fs-access\1.0.1\package\package.json not in flight; writing
+175 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\fs-access\1.0.1\package\package.json written
+176 silly install resolved [ { author:
+176 silly install resolved      { name: 'Isaac Z. Schlueter',
+176 silly install resolved        email: 'i@izs.me',
+176 silly install resolved        url: 'http://blog.izs.me' },
+176 silly install resolved     name: 'which',
+176 silly install resolved     description: 'Like which(1) unix command. Find the first instance of an executable in the PATH.',
+176 silly install resolved     version: '1.2.11',
+176 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/node-which.git' },
+176 silly install resolved     main: 'which.js',
+176 silly install resolved     bin: { which: './bin/which' },
+176 silly install resolved     license: 'ISC',
+176 silly install resolved     dependencies: { isexe: '^1.1.1' },
+176 silly install resolved     devDependencies: { mkdirp: '^0.5.0', rimraf: '^2.3.3', tap: '^5.1.1' },
+176 silly install resolved     scripts:
+176 silly install resolved      { test: 'tap test/*.js --cov',
+176 silly install resolved        changelog: 'bash gen-changelog.sh',
+176 silly install resolved        postversion: 'npm run changelog && git add CHANGELOG.md && git commit -m \'update changelog - \'${npm_package_version}' },
+176 silly install resolved     files: [ 'which.js', 'bin/which' ],
+176 silly install resolved     gitHead: '8a7d0aa1ca10173f9f4d84bf528a3efc1f5d0c6f',
+176 silly install resolved     bugs: { url: 'https://github.com/isaacs/node-which/issues' },
+176 silly install resolved     homepage: 'https://github.com/isaacs/node-which#readme',
+176 silly install resolved     _id: 'which@1.2.11',
+176 silly install resolved     _shasum: 'c8b2eeea6b8c1659fa7c1dd4fdaabe9533dc5e8b',
+176 silly install resolved     _from: 'which@>=1.2.1 <2.0.0',
+176 silly install resolved     _npmVersion: '3.10.7',
+176 silly install resolved     _nodeVersion: '6.5.0',
+176 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+176 silly install resolved     dist:
+176 silly install resolved      { shasum: 'c8b2eeea6b8c1659fa7c1dd4fdaabe9533dc5e8b',
+176 silly install resolved        tarball: 'https://registry.npmjs.org/which/-/which-1.2.11.tgz' },
+176 silly install resolved     maintainers: [ [Object] ],
+176 silly install resolved     _npmOperationalInternal:
+176 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+176 silly install resolved        tmp: 'tmp/which-1.2.11.tgz_1473093398489_0.1032072464004159' },
+176 silly install resolved     directories: {},
+176 silly install resolved     _resolved: 'https://registry.npmjs.org/which/-/which-1.2.11.tgz',
+176 silly install resolved     readme: 'ERROR: No README data found!' },
+176 silly install resolved   { name: 'fs-access',
+176 silly install resolved     version: '1.0.1',
+176 silly install resolved     description: 'Node.js 0.12 fs.access() & fs.accessSync() ponyfill',
+176 silly install resolved     license: 'MIT',
+176 silly install resolved     repository:
+176 silly install resolved      { type: 'git',
+176 silly install resolved        url: 'git+https://github.com/sindresorhus/fs-access.git' },
+176 silly install resolved     author:
+176 silly install resolved      { name: 'Sindre Sorhus',
+176 silly install resolved        email: 'sindresorhus@gmail.com',
+176 silly install resolved        url: 'sindresorhus.com' },
+176 silly install resolved     engines: { node: '>=0.10.0' },
+176 silly install resolved     scripts: { test: 'node test.js' },
+176 silly install resolved     files: [ 'index.js' ],
+176 silly install resolved     keywords:
+176 silly install resolved      [ 'built-in',
+176 silly install resolved        'core',
+176 silly install resolved        'ponyfill',
+176 silly install resolved        'polyfill',
+176 silly install resolved        'shim',
+176 silly install resolved        'fs',
+176 silly install resolved        'access',
+176 silly install resolved        'stat',
+176 silly install resolved        'mode',
+176 silly install resolved        'permission',
+176 silly install resolved        'user',
+176 silly install resolved        'process',
+176 silly install resolved        'check' ],
+176 silly install resolved     dependencies: { 'null-check': '^1.0.0' },
+176 silly install resolved     devDependencies: { 'os-tmpdir': '^1.0.0' },
+176 silly install resolved     gitHead: '5b9c45c28f0199be3531c1991f6fbd858067c918',
+176 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/fs-access/issues' },
+176 silly install resolved     homepage: 'https://github.com/sindresorhus/fs-access#readme',
+176 silly install resolved     _id: 'fs-access@1.0.1',
+176 silly install resolved     _shasum: 'd6a87f262271cefebec30c553407fb995da8777a',
+176 silly install resolved     _from: 'fs-access@>=1.0.0 <2.0.0',
+176 silly install resolved     _npmVersion: '2.15.9',
+176 silly install resolved     _nodeVersion: '4.5.0',
+176 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+176 silly install resolved     dist:
+176 silly install resolved      { shasum: 'd6a87f262271cefebec30c553407fb995da8777a',
+176 silly install resolved        tarball: 'https://registry.npmjs.org/fs-access/-/fs-access-1.0.1.tgz' },
+176 silly install resolved     maintainers: [ [Object] ],
+176 silly install resolved     _npmOperationalInternal:
+176 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+176 silly install resolved        tmp: 'tmp/fs-access-1.0.1.tgz_1475222143995_0.7106209583580494' },
+176 silly install resolved     directories: {},
+176 silly install resolved     _resolved: 'https://registry.npmjs.org/fs-access/-/fs-access-1.0.1.tgz',
+176 silly install resolved     readme: 'ERROR: No README data found!' } ]
+177 info install which@1.2.11 into E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+178 info install fs-access@1.0.1 into E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+179 info installOne which@1.2.11
+180 verbose installOne of which to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher not in flight; installing
+181 info installOne fs-access@1.0.1
+182 verbose installOne of fs-access to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher not in flight; installing
+183 verbose lock using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\which-514ee6a88237169d.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+184 verbose lock using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\fs-access-62abf2ea5eb5dc33.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+185 silly install write writing which 1.2.11 to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+186 silly install write writing fs-access 1.0.1 to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+187 verbose unbuild node_modules\karma-chrome-launcher\node_modules\which
+188 verbose unbuild node_modules\karma-chrome-launcher\node_modules\fs-access
+189 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which is being purged from base E:\OpenServer\domains\developments\_gulp-builder
+190 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+191 verbose tar unpack C:\Users\Bogdan\AppData\Roaming\npm-cache\which\1.2.11\package.tgz
+192 verbose tar unpacking to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+193 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which is being purged
+194 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+195 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access is being purged from base E:\OpenServer\domains\developments\_gulp-builder
+196 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+197 silly gunzTarPerm modes [ '777', '666' ]
+198 verbose tar unpack C:\Users\Bogdan\AppData\Roaming\npm-cache\fs-access\1.0.1\package.tgz
+199 verbose tar unpacking to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+200 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access is being purged
+201 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+202 silly gunzTarPerm modes [ '777', '666' ]
+203 silly gunzTarPerm extractEntry package.json
+204 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+205 silly gunzTarPerm extractEntry package.json
+206 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+207 silly gunzTarPerm extractEntry README.md
+208 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+209 silly gunzTarPerm extractEntry LICENSE
+210 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+211 silly gunzTarPerm extractEntry index.js
+212 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+213 silly gunzTarPerm extractEntry license
+214 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+215 silly gunzTarPerm extractEntry which.js
+216 silly gunzTarPerm modified mode [ 'which.js', 420, 438 ]
+217 silly gunzTarPerm extractEntry bin/which
+218 silly gunzTarPerm modified mode [ 'bin/which', 493, 511 ]
+219 silly gunzTarPerm extractEntry readme.md
+220 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+221 silly gunzTarPerm extractEntry CHANGELOG.md
+222 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+223 verbose write writing to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\package.json
+224 info preinstall fs-access@1.0.1
+225 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\package.json
+226 verbose write writing to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\package.json
+227 silly prepareForInstallMany adding null-check@^1.0.0 from fs-access dependencies
+228 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\package.json
+229 info preinstall which@1.2.11
+230 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\package.json
+231 silly cache add args [ 'null-check@^1.0.0', null ]
+232 verbose cache add spec null-check@^1.0.0
+233 silly cache add parsed spec Result {
+233 silly cache add   raw: 'null-check@^1.0.0',
+233 silly cache add   scope: null,
+233 silly cache add   name: 'null-check',
+233 silly cache add   rawSpec: '^1.0.0',
+233 silly cache add   spec: '>=1.0.0 <2.0.0',
+233 silly cache add   type: 'range' }
+234 silly addNamed null-check@>=1.0.0 <2.0.0
+235 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for null-check
+236 silly addNameRange { name: 'null-check', range: '>=1.0.0 <2.0.0', hasData: false }
+237 silly mapToRegistry name null-check
+238 silly mapToRegistry using default registry
+239 silly mapToRegistry registry https://registry.npmjs.org/
+240 silly mapToRegistry uri https://registry.npmjs.org/null-check
+241 verbose addNameRange registry:https://registry.npmjs.org/null-check not in flight; fetching
+242 silly prepareForInstallMany adding isexe@^1.1.1 from which dependencies
+243 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\package.json
+244 verbose request uri https://registry.npmjs.org/null-check
+245 verbose request no auth needed
+246 info attempt registry request try #1 at 12:45:52
+247 verbose etag "1GL76T9T4VULOQLIHGUIXWZJY"
+248 http request GET https://registry.npmjs.org/null-check
+249 silly cache add args [ 'isexe@^1.1.1', null ]
+250 verbose cache add spec isexe@^1.1.1
+251 silly cache add parsed spec Result {
+251 silly cache add   raw: 'isexe@^1.1.1',
+251 silly cache add   scope: null,
+251 silly cache add   name: 'isexe',
+251 silly cache add   rawSpec: '^1.1.1',
+251 silly cache add   spec: '>=1.1.1 <2.0.0',
+251 silly cache add   type: 'range' }
+252 silly addNamed isexe@>=1.1.1 <2.0.0
+253 verbose addNamed ">=1.1.1 <2.0.0" is a valid semver range for isexe
+254 silly addNameRange { name: 'isexe', range: '>=1.1.1 <2.0.0', hasData: false }
+255 silly mapToRegistry name isexe
+256 silly mapToRegistry using default registry
+257 silly mapToRegistry registry https://registry.npmjs.org/
+258 silly mapToRegistry uri https://registry.npmjs.org/isexe
+259 verbose addNameRange registry:https://registry.npmjs.org/isexe not in flight; fetching
+260 verbose request uri https://registry.npmjs.org/isexe
+261 verbose request no auth needed
+262 info attempt registry request try #1 at 12:45:52
+263 verbose etag "A2WFQOVCYSXLEGQ5B5D2A8KGT"
+264 http request GET https://registry.npmjs.org/isexe
+265 http 304 https://registry.npmjs.org/null-check
+266 verbose headers { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+266 verbose headers   via: '1.1 varnish',
+266 verbose headers   'cache-control': 'max-age=300',
+266 verbose headers   etag: '"1GL76T9T4VULOQLIHGUIXWZJY"',
+266 verbose headers   age: '292',
+266 verbose headers   connection: 'keep-alive',
+266 verbose headers   'x-served-by': 'cache-lcy1120-LCY',
+266 verbose headers   'x-cache': 'HIT',
+266 verbose headers   'x-cache-hits': '3',
+266 verbose headers   'x-timer': 'S1475228756.620860,VS0,VE0',
+266 verbose headers   vary: 'Accept-Encoding' }
+267 silly get cb [ 304,
+267 silly get   { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+267 silly get     via: '1.1 varnish',
+267 silly get     'cache-control': 'max-age=300',
+267 silly get     etag: '"1GL76T9T4VULOQLIHGUIXWZJY"',
+267 silly get     age: '292',
+267 silly get     connection: 'keep-alive',
+267 silly get     'x-served-by': 'cache-lcy1120-LCY',
+267 silly get     'x-cache': 'HIT',
+267 silly get     'x-cache-hits': '3',
+267 silly get     'x-timer': 'S1475228756.620860,VS0,VE0',
+267 silly get     vary: 'Accept-Encoding' } ]
+268 verbose etag https://registry.npmjs.org/null-check from cache
+269 verbose get saving null-check to C:\Users\Bogdan\AppData\Roaming\npm-cache\registry.npmjs.org\null-check\.cache.json
+270 http 304 https://registry.npmjs.org/isexe
+271 verbose headers { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+271 verbose headers   via: '1.1 varnish',
+271 verbose headers   'cache-control': 'max-age=300',
+271 verbose headers   etag: '"A2WFQOVCYSXLEGQ5B5D2A8KGT"',
+271 verbose headers   age: '256',
+271 verbose headers   connection: 'keep-alive',
+271 verbose headers   'x-served-by': 'cache-lcy1128-LCY',
+271 verbose headers   'x-cache': 'HIT',
+271 verbose headers   'x-cache-hits': '30',
+271 verbose headers   'x-timer': 'S1475228756.627501,VS0,VE0',
+271 verbose headers   vary: 'Accept-Encoding' }
+272 silly get cb [ 304,
+272 silly get   { date: 'Fri, 30 Sep 2016 09:45:56 GMT',
+272 silly get     via: '1.1 varnish',
+272 silly get     'cache-control': 'max-age=300',
+272 silly get     etag: '"A2WFQOVCYSXLEGQ5B5D2A8KGT"',
+272 silly get     age: '256',
+272 silly get     connection: 'keep-alive',
+272 silly get     'x-served-by': 'cache-lcy1128-LCY',
+272 silly get     'x-cache': 'HIT',
+272 silly get     'x-cache-hits': '30',
+272 silly get     'x-timer': 'S1475228756.627501,VS0,VE0',
+272 silly get     vary: 'Accept-Encoding' } ]
+273 verbose etag https://registry.npmjs.org/isexe from cache
+274 verbose get saving isexe to C:\Users\Bogdan\AppData\Roaming\npm-cache\registry.npmjs.org\isexe\.cache.json
+275 silly addNameRange number 2 { name: 'null-check', range: '>=1.0.0 <2.0.0', hasData: true }
+276 silly addNameRange versions [ 'null-check', [ '1.0.0', '2.0.0' ] ]
+277 silly addNamed null-check@1.0.0
+278 verbose addNamed "1.0.0" is a plain semver version for null-check
+279 silly cache afterAdd null-check@1.0.0
+280 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\null-check\1.0.0\package\package.json not in flight; writing
+281 silly addNameRange number 2 { name: 'isexe', range: '>=1.1.1 <2.0.0', hasData: true }
+282 silly addNameRange versions [ 'isexe', [ '1.0.0', '1.0.1', '1.1.0', '1.1.1', '1.1.2' ] ]
+283 silly addNamed isexe@1.1.2
+284 verbose addNamed "1.1.2" is a plain semver version for isexe
+285 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\null-check\1.0.0\package\package.json written
+286 silly install resolved [ { name: 'null-check',
+286 silly install resolved     version: '1.0.0',
+286 silly install resolved     description: 'Ensure a path doesn\'t contain null bytes',
+286 silly install resolved     license: 'MIT',
+286 silly install resolved     repository:
+286 silly install resolved      { type: 'git',
+286 silly install resolved        url: 'git+https://github.com/sindresorhus/null-check.git' },
+286 silly install resolved     author:
+286 silly install resolved      { name: 'Sindre Sorhus',
+286 silly install resolved        email: 'sindresorhus@gmail.com',
+286 silly install resolved        url: 'sindresorhus.com' },
+286 silly install resolved     engines: { node: '>=0.10.0' },
+286 silly install resolved     scripts: { test: 'node test.js' },
+286 silly install resolved     files: [ 'index.js' ],
+286 silly install resolved     keywords:
+286 silly install resolved      [ 'built-in',
+286 silly install resolved        'core',
+286 silly install resolved        'ponyfill',
+286 silly install resolved        'polyfill',
+286 silly install resolved        'shim',
+286 silly install resolved        'fs',
+286 silly install resolved        'path',
+286 silly install resolved        'null',
+286 silly install resolved        'bytes',
+286 silly install resolved        'check' ],
+286 silly install resolved     devDependencies: { ava: '0.0.4' },
+286 silly install resolved     gitHead: 'bcdcbc68e4735aa5222a2c5575335041cd59ebaa',
+286 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/null-check/issues' },
+286 silly install resolved     homepage: 'https://github.com/sindresorhus/null-check',
+286 silly install resolved     _id: 'null-check@1.0.0',
+286 silly install resolved     _shasum: '977dffd7176012b9ec30d2a39db5cf72a0439edd',
+286 silly install resolved     _from: 'null-check@>=1.0.0 <2.0.0',
+286 silly install resolved     _npmVersion: '2.7.4',
+286 silly install resolved     _nodeVersion: '0.12.2',
+286 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+286 silly install resolved     dist:
+286 silly install resolved      { shasum: '977dffd7176012b9ec30d2a39db5cf72a0439edd',
+286 silly install resolved        tarball: 'https://registry.npmjs.org/null-check/-/null-check-1.0.0.tgz' },
+286 silly install resolved     maintainers: [ [Object] ],
+286 silly install resolved     directories: {},
+286 silly install resolved     _resolved: 'https://registry.npmjs.org/null-check/-/null-check-1.0.0.tgz',
+286 silly install resolved     readme: 'ERROR: No README data found!' } ]
+287 info install null-check@1.0.0 into E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+288 info installOne null-check@1.0.0
+289 verbose installOne of null-check to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access not in flight; installing
+290 silly cache afterAdd isexe@1.1.2
+291 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\isexe\1.1.2\package\package.json not in flight; writing
+292 verbose lock using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\null-check-915d8615f456bcd1.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+293 silly install write writing null-check 1.0.0 to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+294 verbose afterAdd C:\Users\Bogdan\AppData\Roaming\npm-cache\isexe\1.1.2\package\package.json written
+295 silly install resolved [ { name: 'isexe',
+295 silly install resolved     version: '1.1.2',
+295 silly install resolved     description: 'Minimal module to check if a file is executable.',
+295 silly install resolved     main: 'index.js',
+295 silly install resolved     directories: { test: 'test' },
+295 silly install resolved     devDependencies: { mkdirp: '^0.5.1', rimraf: '^2.5.0', tap: '^5.1.2' },
+295 silly install resolved     scripts: { test: 'tap test/*.js --branches=100 --statements=100 --functions=100 --lines=100' },
+295 silly install resolved     author:
+295 silly install resolved      { name: 'Isaac Z. Schlueter',
+295 silly install resolved        email: 'i@izs.me',
+295 silly install resolved        url: 'http://blog.izs.me/' },
+295 silly install resolved     license: 'ISC',
+295 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/isaacs/isexe.git' },
+295 silly install resolved     keywords: [],
+295 silly install resolved     bugs: { url: 'https://github.com/isaacs/isexe/issues' },
+295 silly install resolved     homepage: 'https://github.com/isaacs/isexe#readme',
+295 silly install resolved     gitHead: '1882eed72c2ba152f4dd1336d857b0755ae306d9',
+295 silly install resolved     _id: 'isexe@1.1.2',
+295 silly install resolved     _shasum: '36f3e22e60750920f5e7241a476a8c6a42275ad0',
+295 silly install resolved     _from: 'isexe@>=1.1.1 <2.0.0',
+295 silly install resolved     _npmVersion: '3.7.0',
+295 silly install resolved     _nodeVersion: '4.0.0',
+295 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+295 silly install resolved     dist:
+295 silly install resolved      { shasum: '36f3e22e60750920f5e7241a476a8c6a42275ad0',
+295 silly install resolved        tarball: 'http://registry.npmjs.org/isexe/-/isexe-1.1.2.tgz' },
+295 silly install resolved     maintainers: [ [Object] ],
+295 silly install resolved     _npmOperationalInternal:
+295 silly install resolved      { host: 'packages-9-west.internal.npmjs.com',
+295 silly install resolved        tmp: 'tmp/isexe-1.1.2.tgz_1454992795963_0.7608721863944083' },
+295 silly install resolved     _resolved: 'https://registry.npmjs.org/isexe/-/isexe-1.1.2.tgz',
+295 silly install resolved     readme: 'ERROR: No README data found!' } ]
+296 info install isexe@1.1.2 into E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+297 info installOne isexe@1.1.2
+298 verbose installOne of isexe to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which not in flight; installing
+299 verbose lock using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\isexe-0d234362d9ea56fb.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+300 silly install write writing isexe 1.1.2 to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+301 verbose unbuild node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+302 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check is being purged from base E:\OpenServer\domains\developments\_gulp-builder
+303 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+304 verbose tar unpack C:\Users\Bogdan\AppData\Roaming\npm-cache\null-check\1.0.0\package.tgz
+305 verbose tar unpacking to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+306 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check is being purged
+307 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+308 silly gunzTarPerm modes [ '777', '666' ]
+309 verbose unbuild node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+310 silly gunzTarPerm extractEntry package.json
+311 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+312 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe is being purged from base E:\OpenServer\domains\developments\_gulp-builder
+313 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+314 verbose tar unpack C:\Users\Bogdan\AppData\Roaming\npm-cache\isexe\1.1.2\package.tgz
+315 verbose tar unpacking to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+316 silly gentlyRm E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe is being purged
+317 verbose gentlyRm don't care about contents; nuking E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+318 silly gunzTarPerm modes [ '777', '666' ]
+319 silly gunzTarPerm extractEntry index.js
+320 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+321 silly gunzTarPerm extractEntry license
+322 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+323 silly gunzTarPerm extractEntry package.json
+324 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+325 silly gunzTarPerm extractEntry readme.md
+326 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+327 silly gunzTarPerm extractEntry .npmignore
+328 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+329 silly gunzTarPerm extractEntry README.md
+330 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+331 silly gunzTarPerm extractEntry LICENSE
+332 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+333 silly gunzTarPerm extractEntry access.js
+334 silly gunzTarPerm modified mode [ 'access.js', 420, 438 ]
+335 silly gunzTarPerm extractEntry mode.js
+336 silly gunzTarPerm modified mode [ 'mode.js', 420, 438 ]
+337 silly gunzTarPerm extractEntry windows.js
+338 silly gunzTarPerm modified mode [ 'windows.js', 420, 438 ]
+339 silly gunzTarPerm extractEntry index.js
+340 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+341 silly gunzTarPerm extractEntry test/basic.js
+342 silly gunzTarPerm modified mode [ 'test/basic.js', 420, 438 ]
+343 verbose write writing to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check\package.json
+344 info preinstall null-check@1.0.0
+345 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check\package.json
+346 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check\package.json
+347 silly install resolved []
+348 verbose about to build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+349 info build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+350 info linkStuff null-check@1.0.0
+351 silly linkStuff null-check@1.0.0 has E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules as its parent node_modules
+352 verbose linkBins null-check@1.0.0
+353 verbose linkMans null-check@1.0.0
+354 verbose rebuildBundles null-check@1.0.0
+355 info install null-check@1.0.0
+356 verbose write writing to E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe\package.json
+357 info postinstall null-check@1.0.0
+358 info preinstall isexe@1.1.2
+359 verbose unlock done using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\null-check-915d8615f456bcd1.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access\node_modules\null-check
+360 verbose about to build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+361 info build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+362 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe\package.json
+363 info linkStuff fs-access@1.0.1
+364 silly linkStuff fs-access@1.0.1 has E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules as its parent node_modules
+365 verbose linkBins fs-access@1.0.1
+366 verbose linkMans fs-access@1.0.1
+367 verbose rebuildBundles fs-access@1.0.1
+368 verbose rebuildBundles [ 'null-check' ]
+369 info install fs-access@1.0.1
+370 info postinstall fs-access@1.0.1
+371 verbose readDependencies loading dependencies from E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe\package.json
+372 verbose unlock done using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\fs-access-62abf2ea5eb5dc33.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\fs-access
+373 silly install resolved []
+374 verbose about to build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+375 info build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+376 info linkStuff isexe@1.1.2
+377 silly linkStuff isexe@1.1.2 has E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules as its parent node_modules
+378 verbose linkBins isexe@1.1.2
+379 verbose linkMans isexe@1.1.2
+380 verbose rebuildBundles isexe@1.1.2
+381 info install isexe@1.1.2
+382 info postinstall isexe@1.1.2
+383 verbose unlock done using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\isexe-0d234362d9ea56fb.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which\node_modules\isexe
+384 verbose about to build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+385 info build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+386 info linkStuff which@1.2.11
+387 silly linkStuff which@1.2.11 has E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules as its parent node_modules
+388 verbose linkBins which@1.2.11
+389 verbose link bins [ { which: './bin/which' },
+389 verbose link bins   'E:\\OpenServer\\domains\\developments\\_gulp-builder\\node_modules\\karma-chrome-launcher\\node_modules\\.bin',
+389 verbose link bins   false ]
+390 verbose linkMans which@1.2.11
+391 verbose rebuildBundles which@1.2.11
+392 verbose rebuildBundles [ 'isexe' ]
+393 info install which@1.2.11
+394 info postinstall which@1.2.11
+395 verbose unlock done using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\which-514ee6a88237169d.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher\node_modules\which
+396 verbose about to build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+397 info build E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+398 info linkStuff karma-chrome-launcher@2.0.0
+399 silly linkStuff karma-chrome-launcher@2.0.0 has E:\OpenServer\domains\developments\_gulp-builder\node_modules as its parent node_modules
+400 verbose linkBins karma-chrome-launcher@2.0.0
+401 verbose linkMans karma-chrome-launcher@2.0.0
+402 verbose rebuildBundles karma-chrome-launcher@2.0.0
+403 verbose rebuildBundles [ '.bin', 'fs-access', 'which' ]
+404 info install karma-chrome-launcher@2.0.0
+405 info postinstall karma-chrome-launcher@2.0.0
+406 verbose unlock done using C:\Users\Bogdan\AppData\Roaming\npm-cache\_locks\karma-chrome-launcher-0c0a5fff8030e572.lock for E:\OpenServer\domains\developments\_gulp-builder\node_modules\karma-chrome-launcher
+407 verbose validateInstall loading E:\OpenServer\domains\developments\_gulp-builder\package.json for validation
+408 verbose stack Error: The package karma@1.3.0 does not satisfy its siblings' peerDependencies requirements!
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:125:32
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\install.js:268:7
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+408 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+408 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+408 verbose stack     at cb (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+408 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+409 verbose cwd E:\OpenServer\domains\developments\_gulp-builder
+410 error Windows_NT 6.3.9600
+411 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "karma-chrome-launcher" "--save-dev"
+412 error node v4.3.0
+413 error npm  v2.14.12
+414 error code EPEERINVALID
+415 error peerinvalid The package karma@1.3.0 does not satisfy its siblings' peerDependencies requirements!
+415 error peerinvalid Peer gulp-karma@0.0.5 wants karma@>=0.10 <=0.13
+415 error peerinvalid Peer karma-jasmine@1.0.2 wants karma@*
+415 error peerinvalid Peer karma-jquery@0.1.0 wants karma@>=0.9
+416 verbose exit [ 1, true ]
