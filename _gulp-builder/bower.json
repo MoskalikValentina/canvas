@@ -12,8 +12,7 @@
     "jquery": "2.*",
     "magnificPopup": "git://github.com/dimsemenov/Magnific-Popup.git",
     "slick": "git://github.com/kenwheeler/slick.git",
-    "meyer-reset": "*",
-    "bootstrap": "v4.0.0-alpha.2"
+    "meyer-reset": "*"
   },
   "moduleType": [
     "node"
