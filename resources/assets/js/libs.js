@@ -1,2 +1,1 @@
-// Plugins load
-//= libs/plugins.js
+require('./libs/plugins.js');

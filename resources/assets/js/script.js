@@ -1,2 +1,1 @@
-//Site script
-//= script/main.js
+require('./script/main.js');

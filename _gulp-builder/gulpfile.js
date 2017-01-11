@@ -11,8 +11,6 @@ var scss_main_file_name = 'style.scss';
 var css_main_file_name = 'style.css';
 var sprite_img_file_name = '../img/sprites/sprite.png';
 var sprite_scss_file_name = '_sprite.scss';
-var js_file_name = "script.js";
-var js_file_libs = "libs.js";
 var zip_file_name = 'build.zip';
 
 var path = {
@@ -23,22 +21,16 @@ var path = {
         fonts: build_dir + '/fonts/',
         sprite_scss: src_dir + '/sass/4_common',
         zip: build_dir + '/',
-        babel: build_dir + '/babel/'
     },
     src: {
         css: src_dir + '/sass/' + scss_main_file_name,
-        js: src_dir + '/js/script.js',
-        js_libs: src_dir + '/js/libs.js',
         img: src_dir + '/img/**/*.*',
         fonts: src_dir + '/fonts/*.ttf',
         sprites: src_dir + '/img/sprites/*.*',
         zip: [build_dir + '/**', '!' + build_dir + '/_gulp-builder/node_modules/**', '!' + build_dir + '/_gulp-builder/bower_components/**'],
-        lint: src_dir + '/js/script/*.js',
-        babel: src_dir + '/js/b.js'
     },
     watch: {
         css: src_dir + '/sass/**/*.*',
-        js: src_dir + '/js/**/*.js',
         img: src_dir + '/img/**/*.*',
         fonts: src_dir + '/fonts/**/*.*',
         sprite: src_dir + '/img/sprites/*.*'
@@ -52,9 +44,9 @@ var path = {
 
 var gulp = require('gulp');
 var Server = require('karma').Server;
+var webpack = require('gulp-webpack');
 var plugins = {
     'rename': require('gulp-rename'),
-    'rigger': require('gulp-rigger'),
     'sourcemaps': require('gulp-sourcemaps'),
     'sass': require('gulp-ruby-sass'),
     'prefixer': require('gulp-autoprefixer'),
@@ -70,11 +62,6 @@ var plugins = {
     'spritesmith': require('gulp.spritesmith'),
     'ttf2woff': require('gulp-ttf2woff'),
     'ttf2eot': require('gulp-ttf2eot'),
-    'debug' : require('gulp-debug'),
-    'jshint' : require('gulp-jshint'),
-    'stylish' : require('jshint-stylish'),
-    'babel' : require('gulp-babel'),
-    'es2015' : require('babel-preset-es2015'),
 };
 
 /***********************************************************************************************************************
@@ -156,83 +143,24 @@ gulp.task('css:dev', function() {
 });
 
 /***********************************************************************************************************************
- * Task: Babel
+ * Task: Webpack
  ***********************************************************************************************************************
  *
- * Transforming from es6 to es5 js
- *
- **********************************************************************************************************************/
-    gulp.task('js:babel', function() {
-     // Node source
-      return gulp.src(path.watch.js)
-        .pipe(plugins.babel({
-            presets: [plugins.es2015]
-            }))
-        .pipe(gulp.dest(path.build.babel));
-    });
-
-/***********************************************************************************************************************
- * Task: JS
- ***********************************************************************************************************************
- *
- * Concatenates and minimizes js files
+ * Run webpack
  *
  **********************************************************************************************************************/
 
-gulp.task('js:build', function() {
-    gulp.src(path.src.js)
-        .pipe(plugins.plumber())
-        .pipe(plugins.rigger())
-        .pipe(plugins.babel({
-            presets: [plugins.es2015]
-        }))
-        .pipe(plugins.rename('dist.' + js_file_name))
-        .pipe(gulp.dest(path.build.js))
-        .pipe(plugins.uglify({
-            mangle: false //Need for angular normal work. Off renaming
-        }))
-        .pipe(plugins.rename(js_file_name))
-        .pipe(gulp.dest(path.build.js))
-        .pipe(reload({
-            stream: true
-        }));
-
-        gulp.src(path.src.js_libs)
-        .pipe(plugins.plumber())
-        .pipe(plugins.rigger())
-        .pipe(plugins.uglify({
-            mangle: false //Need for angular normal work. Off renaming
-        }))
-        .pipe(plugins.rename(js_file_libs))
-        .pipe(gulp.dest(path.build.js))
-        .pipe(reload({
-            stream: true
-        }));    
+gulp.task('webpack', function() {
+return gulp.src('src/entry.js')
+  .pipe(webpack( require('./webpack.config.js') ))
+  .pipe(gulp.dest(path.build.js));
 });
 
-gulp.task('js:dev', function() {
-    gulp.src(path.src.js)
-        .pipe(plugins.plumber())
-        .pipe(plugins.sourcemaps.init())
-        .pipe(plugins.rigger())
-        .pipe(plugins.babel({
-            presets: [plugins.es2015]
-        }))
-        .pipe(plugins.sourcemaps.write('map'))
-        .pipe(gulp.dest(path.build.js))
-        .pipe(reload({
-            stream: true
-        }));
-
-        gulp.src(path.src.js_libs)
-            .pipe(plugins.plumber())
-            .pipe(plugins.rigger())
-            .pipe(gulp.dest(path.build.js))
-            .pipe(reload({
-                stream: true
-        }));
+gulp.task('webpack:watch', function() {
+return gulp.src('src/entry.js')
+  .pipe(webpack( require('./webpack.config.js'),{watch: true} ))
+  .pipe(gulp.dest(path.build.js));
 });
-
 
 /***********************************************************************************************************************
  * Task: Test by karma
@@ -314,11 +242,11 @@ gulp.task('fonts', function() {
  **********************************************************************************************************************/
 
 
-gulp.task('lint', function() {
-  return gulp.src(path.src.lint)
-    .pipe(plugins.jshint())
-    .pipe(plugins.jshint.reporter(plugins.stylish));
-});
+// gulp.task('lint', function() {
+//   return gulp.src(path.src.lint)
+//     .pipe(plugins.jshint())
+//     .pipe(plugins.jshint.reporter(plugins.stylish));
+// });
 
 
 
@@ -372,7 +300,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task('build', [
     'sprite',
-    'js:build',
+    'webpack',
     'css:build',
     'fonts',
     'img:build',
@@ -388,11 +316,11 @@ gulp.task('build', [
 
 gulp.task('dev', [
     'sprite',
-    'js:dev',
+    'webpack',
     'css:dev',
     'fonts',
     'img:dev',
-    'lint'
+    // 'lint'
 ]);
 
 /***********************************************************************************************************************
@@ -410,9 +338,9 @@ gulp.task('watch', function() {
     plugins.watch([path.watch.sprite], function(event, cb) {
         gulp.start('sprite');
     });
-    plugins.watch([path.watch.js], function(event, cb) {
-        gulp.start('js:dev');
-    });
+
+    gulp.start('webpack');
+
     plugins.watch([path.watch.img], function(event, cb) {
         gulp.start('img:dev');
     });

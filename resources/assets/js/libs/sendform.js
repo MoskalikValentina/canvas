@@ -172,7 +172,7 @@
 
             //Is email testing
             function isEmail(element) {
-                var email = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
+                var email = /^[-\w.]+@([A-z0-9]+\.)+[A-z]{2,4}$/;
                 return email.test($(element).val());
             }
 

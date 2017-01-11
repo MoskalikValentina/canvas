@@ -9,11 +9,11 @@
     "tests"
   ],
   "dependencies": {
+    "bootstrap": "v4.0.0-alpha.3",
     "jquery": "2.*",
     "magnificPopup": "git://github.com/dimsemenov/Magnific-Popup.git",
-    "slick": "git://github.com/kenwheeler/slick.git",
     "meyer-reset": "*",
-    "bootstrap": "v4.0.0-alpha.3"
+    "slick": "git://github.com/kenwheeler/slick.git"
   },
   "moduleType": [
     "node"

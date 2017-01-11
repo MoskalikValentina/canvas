@@ -1,8 +1,8 @@
-// jQuery load
-//= ../../../../_gulp-builder/bower_components/jquery/dist/jquery.min.js
+//JQuery 
+require('expose?$!expose?jQuery!jquery');
 
 //JQuery Mask
-//= jquery.maskedinput.min.js
+require('./maskedinput.min.js');
 
 //Sendform
-//= sendform.js
+require('./sendform.js');
